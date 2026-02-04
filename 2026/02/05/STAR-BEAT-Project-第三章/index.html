@@ -1,0 +1,1540 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Jjjjkooo">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="第3章「Warming Up」—— 各自的第一次突破 场景3-1：有咲的突破——第一个有效的模型十二月的东京，天气冷得像是有人往空气里倒了液氮。 但AI研究楼五层的实验室里，温度却热得让人想脱外套——不是因为暖气开太足，而是因为几十台服务器正在全功率运转，把GPU的算力变成一波波热浪。 市ヶ谷有咲坐在自己的工位前，盯着屏幕上正在滚动的数字。 123456Epoch 10&#x2F;10 | Step 150">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STAR::BEAT Project 第三章">
+<meta property="og:url" content="https://blog.arisa.best/2026/02/05/STAR-BEAT-Project-%E7%AC%AC%E4%B8%89%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Jjjjkooo&#39;s Website">
+<meta property="og:description" content="第3章「Warming Up」—— 各自的第一次突破 场景3-1：有咲的突破——第一个有效的模型十二月的东京，天气冷得像是有人往空气里倒了液氮。 但AI研究楼五层的实验室里，温度却热得让人想脱外套——不是因为暖气开太足，而是因为几十台服务器正在全功率运转，把GPU的算力变成一波波热浪。 市ヶ谷有咲坐在自己的工位前，盯着屏幕上正在滚动的数字。 123456Epoch 10&#x2F;10 | Step 150">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-02-04T20:58:37.000Z">
+<meta property="article:modified_time" content="2026-02-04T21:05:26.689Z">
+<meta property="article:author" content="Jjjjkooo">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>STAR::BEAT Project 第三章 - Jjjjkooo&#39;s Website</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.arisa.best","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Jjjjkooo&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/my_banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="STAR::BEAT Project 第三章"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-02-05 04:58" pubdate>
+          February 5, 2026 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          11k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          93 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">STAR::BEAT Project 第三章</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="第3章「Warming-Up」——-各自的第一次突破"><a href="#第3章「Warming-Up」——-各自的第一次突破" class="headerlink" title="第3章「Warming Up」—— 各自的第一次突破"></a>第3章「Warming Up」—— 各自的第一次突破</h1><hr>
+<h2 id="场景3-1：有咲的突破——第一个有效的模型"><a href="#场景3-1：有咲的突破——第一个有效的模型" class="headerlink" title="场景3-1：有咲的突破——第一个有效的模型"></a>场景3-1：有咲的突破——第一个有效的模型</h2><p>十二月的东京，天气冷得像是有人往空气里倒了液氮。</p>
+<p>但AI研究楼五层的实验室里，温度却热得让人想脱外套——不是因为暖气开太足，而是因为几十台服务器正在全功率运转，把GPU的算力变成一波波热浪。</p>
+<p>市ヶ谷有咲坐在自己的工位前，盯着屏幕上正在滚动的数字。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Epoch</span> <span class="hljs-number">10</span>/<span class="hljs-number">10</span> | Step <span class="hljs-number">15000</span>/<span class="hljs-number">15000</span><br><span class="hljs-attribute">Train</span> Loss: <span class="hljs-number">0</span>.<span class="hljs-number">2341</span> | Val Loss: <span class="hljs-number">0</span>.<span class="hljs-number">2567</span><br><span class="hljs-attribute">Accuracy</span>: <span class="hljs-number">0</span>.<span class="hljs-number">873</span> | F1: <span class="hljs-number">0</span>.<span class="hljs-number">861</span><br><span class="hljs-attribute">Learning</span> Rate: <span class="hljs-number">3</span>.<span class="hljs-number">00</span>e-<span class="hljs-number">6</span><br><br><span class="hljs-attribute">Training</span> completed. Model saved to: checkpoints/star-tiny-final.pt<br></code></pre></td></tr></table></figure>
+
+<p>训练完成。</p>
+<p>最终准确率：87.3%。</p>
+<p>有咲眨了眨眼，以为自己看错了。</p>
+<p>然后又眨了眨。</p>
+<p>数字没有变。</p>
+<p>「……87.3%？」</p>
+<p>她的声音干涩，像是很久没喝水——事实上她确实忘了喝水，在电脑前坐了将近六个小时。</p>
+<p>但这不重要。</p>
+<p>重要的是那个数字。</p>
+<p><strong>87.3%。</strong></p>
+<p>比她的LSTM baseline高了整整12个百分点。</p>
+<p>比去年学长做的模型还高了2个百分点。</p>
+<p>「怎么可能……」</p>
+<p>她下意识地打开评估日志，从头到尾检查了一遍。</p>
+<p>数据加载没有问题，train&#x2F;val&#x2F;test是严格分开的，没有数据泄露。</p>
+<p>评估指标计算没有问题，用的是sklearn的标准函数。</p>
+<p>模型checkpoint保存正确，可以复现。</p>
+<p>没有Bug。</p>
+<p>这就是真实的结果。</p>
+<p>有咲靠在椅背上，感觉心脏跳得有点快。</p>
+<p>半年。</p>
+<p>整整半年。</p>
+<p>从什么都不懂的小白，到摸清Transformer架构的每一个细节；从梯度消失的绝望深坑，到学会用各种技巧稳定训练；从论文里看不懂的公式，到能自己实现并改进……</p>
+<p>六个月的挣扎、失败、熬夜、自我怀疑——</p>
+<p>最后变成了屏幕上这个数字。</p>
+<p><strong>87.3%。</strong></p>
+<p>她打开自己写的实验记录，开始补充最后的内容：</p>
+<hr>
+<p><strong>实验记录 #47</strong></p>
+<p><strong>模型名称</strong>：Star-Tiny（暂命名）</p>
+<p><strong>架构规格</strong>：</p>
+<ul>
+<li>类型：Transformer Encoder</li>
+<li>层数：4</li>
+<li>隐藏维度：256</li>
+<li>注意力头数：4</li>
+<li>FFN维度：1024</li>
+<li>参数总量：约1200万（12M）</li>
+</ul>
+<p><strong>训练配置</strong>：</p>
+<ul>
+<li>数据集：中文情感分析语料（约50万条）</li>
+<li>优化器：AdamW</li>
+<li>学习率：3e-4（峰值），采用Cosine Decay</li>
+<li>Warmup步数：1000</li>
+<li>Batch Size：32</li>
+<li>训练轮次：10</li>
+<li>混合精度：FP16（节省显存，加速训练）</li>
+</ul>
+<p><strong>最终结果</strong>：</p>
+<ul>
+<li>测试集准确率：<strong>87.3%</strong></li>
+<li>F1分数：<strong>86.1%</strong></li>
+<li>单句推理延迟：&lt;10ms（RTX 3090）</li>
+</ul>
+<p><strong>对比</strong>：</p>
+<ul>
+<li>LSTM Baseline：75.2%</li>
+<li>去年学长的BERT-tiny复现：85.1%</li>
+<li>本模型：87.3%（<strong>+12.1% vs LSTM，+2.2% vs 学长</strong>）</li>
+</ul>
+<p><strong>分析</strong>：<br>模型在验证集和测试集上的表现接近，说明没有严重过拟合。Attention权重可视化显示，模型学会了关注情感关键词（如”喜欢”、”讨厌”、”开心”、”难过”等），说明注意力机制确实在起作用。</p>
+<p>下一步可以尝试：</p>
+<ol>
+<li>扩大模型规模（增加层数和隐藏维度）</li>
+<li>使用更大的预训练数据集</li>
+<li>尝试加入情感相关的特殊token</li>
+</ol>
+<hr>
+<p>写完记录，有咲长长地呼出一口气。</p>
+<p>旁边工位的学长探过头来：「市ヶ谷，又在熬夜？——等等，那个数字是……」</p>
+<p>「87.3。」有咲的声音尽量保持平静，「测试集准确率。」</p>
+<p>学长眼睛瞬间亮了：「比我之前的还高？你用的什么架构？」</p>
+<p>「自己改的Transformer Encoder。四层，256维，换了一些激活函数的位置，加了一点正则化……」</p>
+<p>「给我看看代码——」</p>
+<p>「喂，你自己写啊……」</p>
+<p>就在这时，实验室的门被推开了。</p>
+<p>是导师。</p>
+<p>「这么晚还有人在？」他扫视了一圈，目光落在有咲的屏幕上，「市ヶ谷？你在做什么？」</p>
+<p>有咲下意识地想最小化窗口——虽然这不是什么见不得人的东西，但被导师突然检查总是让人紧张。</p>
+<p>然后她反应过来，自己没必要心虚。</p>
+<p>「……期末的课题项目。情感分析模型，刚跑完最后一轮训练。」</p>
+<p>导师走过来，低头看着屏幕上的数字。</p>
+<p>「87.3%？」</p>
+<p>「是。」</p>
+<p>「比baseline高多少？」</p>
+<p>「原始LSTM是75.2%，提升了12个百分点。」</p>
+<p>导师沉默了几秒。</p>
+<p>有咲的心跳开始加速——她不知道这个沉默代表什么。是觉得不够好？还是看出了什么问题？</p>
+<p>然后导师开口了：</p>
+<p>「学习率调度和warmup的设置很合理。」</p>
+<p>「……诶？」</p>
+<p>「我看你的训练曲线，收敛很稳定，没有剧烈抖动。说明你对这些超参数的理解已经到位了。」</p>
+<p>他指着屏幕上有咲刚才调出来的Attention可视化图：</p>
+<p>「这个权重分布分析也很有insight。你发现模型重点关注了哪些token？」</p>
+<p>「……主要是情感词。比如形容词和副词的位置，注意力分数明显更高。」</p>
+<p>「嗯。这说明你不只是在调参数，还在尝试理解模型在做什么。」</p>
+<p>导师点点头，语气里有了一丝不易察觉的赞许。</p>
+<p>「做得不错，市ヶ谷。继续保持。」</p>
+<p>说完，他就转身离开了。</p>
+<p>有咲愣在原地。</p>
+<p><em>做得不错。</em></p>
+<p><em>继续保持。</em></p>
+<p>这是她进入这个实验室一年半以来，第一次从导师嘴里听到正面评价。</p>
+<p>虽然只是短短两句话。</p>
+<p>虽然语气还是一如既往的平淡。</p>
+<p>但——</p>
+<p>有咲低下头，发现自己的手在微微发抖。</p>
+<p>不是因为紧张。</p>
+<p>是因为——</p>
+<p><em>太好了。</em></p>
+<p><em>真的太好了。</em></p>
+<p>她不知道该怎么形容这种感觉。</p>
+<p>像是在黑暗里走了很久很久，突然看到前方有一点光亮。</p>
+<p>很小的一点。</p>
+<p>但确确实实存在。</p>
+<p>「……切。」</p>
+<p>她小声嘀咕，努力把表情恢复成平时那副”才不在乎”的样子。</p>
+<p>然后掏出手机，打开群聊。</p>
+<p>犹豫了几秒。</p>
+<p>最后只打了两个字：</p>
+<blockquote>
+<p><strong>有咲</strong>：还行。</p>
+</blockquote>
+<p>附带一张屏幕截图——上面清晰地显示着「Accuracy: 0.873」。</p>
+<p>发送。</p>
+<p>三秒后，香澄的回复像机关枪一样扫射过来：</p>
+<blockquote>
+<p><strong>香澄</strong>：！！！！！！！！<br><strong>香澄</strong>：有咲——！！！！<br><strong>香澄</strong>：这个数字是不是很厉害！！！<br><strong>香澄</strong>：我虽然不太懂但是感觉很厉害！！！<br><strong>香澄</strong>：(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧<br><strong>香澄</strong>：闪闪发光！！！</p>
+</blockquote>
+<blockquote>
+<p><strong>里美</strong>：有咲酱……恭喜……！</p>
+</blockquote>
+<blockquote>
+<p><strong>沙绫</strong>：辛苦了，有咲。这是你努力的成果呢。</p>
+</blockquote>
+<blockquote>
+<p><strong>多惠</strong>：87.3%……这个数字很好看。像一只毛色纯净的兔子。</p>
+</blockquote>
+<p>有咲看着屏幕，嘴角不自觉地上扬。</p>
+<p><em>什么乱七八糟的比喻……</em></p>
+<blockquote>
+<p><strong>有咲</strong>：请正常说话</p>
+</blockquote>
+<blockquote>
+<p><strong>多惠</strong>：我是在夸奖。一个优秀的模型，就像一只学会了新技能的兔子。比如翻身，或者站立。</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：那不是兔子是狗。</p>
+</blockquote>
+<blockquote>
+<p><strong>多惠</strong>：兔子也可以学会这些。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：话说话说！有咲！这个模型是做什么的！</p>
+</blockquote>
+<p>有咲想了想该怎么解释。</p>
+<blockquote>
+<p><strong>有咲</strong>：简单说就是……让电脑学会判断一句话是正面情绪还是负面情绪。<br><strong>有咲</strong>：比如”今天好开心”是正面，”心情好差”是负面。<br><strong>有咲</strong>：训练好的模型可以自动给文本打情感标签。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：哦哦！这个好厉害！！<br><strong>香澄</strong>：那如果有人说”有咲是傲娇”，模型会判断成什么？？</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：……闭嘴。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：是正面还是负面！我很好奇！</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：你再说一句我就把你从群里踢出去。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：有咲不舍得的！！</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：你试试。</p>
+</blockquote>
+<p>但她没有真的去点踢人按钮。</p>
+<p>她只是盯着手机屏幕，看着那些刷过去的消息，感觉胸口有什么东西在发暖。</p>
+<p>窗外是十二月的夜空，看不见星星，只有城市的灯光把天空映成暗橙色。</p>
+<p>但有咲觉得——</p>
+<p>也许，星星不一定要在天上。</p>
+<p>有时候，它们也可以在手机屏幕里。</p>
+<p>在那四个聒噪的、烦人的、但不知道为什么总是能让她嘴角上扬的家伙身上。</p>
+<p>「……白痴。」</p>
+<p>她轻声说，把手机放进口袋。</p>
+<p>然后站起身，开始收拾东西准备回家。</p>
+<p>走出实验楼的时候，冷风扑面而来。</p>
+<p>但有咲一点都不觉得冷。</p>
+<hr>
+<h2 id="场景3-2：多惠的突破——第一次稳定盈利"><a href="#场景3-2：多惠的突破——第一次稳定盈利" class="headerlink" title="场景3-2：多惠的突破——第一次稳定盈利"></a>场景3-2：多惠的突破——第一次稳定盈利</h2><p>一月末，花园家。</p>
+<p>花园多惠坐在自己房间的电脑前，膝盖上趴着一只打盹的兔子。</p>
+<p>窗外是东京少见的雨夜，雨滴敲打着玻璃，发出细密的沙沙声。</p>
+<p>她面前的屏幕上，显示着这个月的策略业绩报告。</p>
+<hr>
+<p><strong>兔笼系统 v0.7 - 月度报告（1月）</strong></p>
+<p><strong>策略类型</strong>：均值回归 + 动态仓位管理</p>
+<p><strong>交易标的</strong>：BTC&#x2F;USDT 永续合约（低杠杆，3x以下）</p>
+<p><strong>核心逻辑</strong>：</p>
+<ul>
+<li>价格偏离20日布林带中轨超过2个标准差时入场</li>
+<li>目标收益：回归至1个标准差位置</li>
+<li>止损：突破3个标准差或持仓超过72小时</li>
+</ul>
+<p><strong>风控规则</strong>：</p>
+<ul>
+<li>单笔最大亏损：2%</li>
+<li>日亏损上限：5%</li>
+<li>总仓位上限：30%</li>
+</ul>
+<p><strong>本月业绩</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>总收益率</td>
+<td><strong>+8.7%</strong></td>
+</tr>
+<tr>
+<td>最大回撤</td>
+<td>3.2%</td>
+</tr>
+<tr>
+<td>夏普比率</td>
+<td>2.14</td>
+</tr>
+<tr>
+<td>胜率</td>
+<td>62%</td>
+</tr>
+<tr>
+<td>盈亏比</td>
+<td>1.8:1</td>
+</tr>
+<tr>
+<td>总交易次数</td>
+<td>47次</td>
+</tr>
+</tbody></table>
+<p><strong>权益曲线</strong>：[稳步上升的折线图]</p>
+<hr>
+<p>多惠盯着那条权益曲线看了一会儿。</p>
+<p>8.7%。</p>
+<p>不算特别高的收益率——那些社交媒体上晒单的”大神”动不动就是月收益50%、100%甚至更多。</p>
+<p>但多惠不羡慕他们。</p>
+<p>因为她知道，那些惊人的收益背后，往往藏着同样惊人的风险。</p>
+<p><strong>能稳定盈利的策略，才是真正有价值的策略。</strong></p>
+<p>这是她亏了32%之后学到的教训。</p>
+<p>「夏普比率2.14……」</p>
+<p>她轻声自语，手指在奥丁的背上轻轻抚摸。</p>
+<p>夏普比率衡量的是”风险调整后的收益”——每承担一单位风险，能获得多少超额回报。</p>
+<p>机构投资者通常认为：</p>
+<ul>
+<li>夏普比率 &lt; 1：不值得投资</li>
+<li>夏普比率 1-2：可接受</li>
+<li>夏普比率 &gt; 2：优秀</li>
+</ul>
+<p>2.14。</p>
+<p>属于”优秀”的范畴。</p>
+<p>而且——</p>
+<p>最大回撤只有3.2%。</p>
+<p>这意味着，在这一个月里，账户最惨的时候也只亏了3.2%，然后就回升了。</p>
+<p>不像去年那次，一口气亏掉32%，差点让她怀疑人生。</p>
+<p>「稳定比赚大钱更重要。」</p>
+<p>多惠又重复了一遍这句话。</p>
+<p>这不是她自己想出来的——是在读一本量化交易的书时看到的。</p>
+<p>作者说：<em>“市场上不缺一夜暴富的神话，缺的是能稳定活下来的交易者。复利是世界第八大奇迹，但前提是你要有足够的时间让复利发挥作用。频繁爆仓的人，没有这个资格。”</em></p>
+<p>多惠把这段话记在了笔记本上，用红笔划了重点。</p>
+<p>想起来，这半年里她改变了很多。</p>
+<p>首先是放弃了那个”兔子因子”。</p>
+<p>不是因为她不相信奥丁——奥丁永远是最好的兔子——而是因为数据不支持。</p>
+<p>经过更长时间的跟踪和更严格的统计检验，她发现奥丁的行为和市场波动率之间的相关系数只有0.08，远远不显著。</p>
+<p>那三个月的正相关，确实只是巧合。</p>
+<p>这是科学教会她的：<strong>假说可以大胆，但验证必须严格。数据说不行，就是不行。</strong></p>
+<p>然后是策略框架的重构。</p>
+<p>她学会了：</p>
+<ul>
+<li>用Bootstrap方法检验策略是否只是过拟合了噪声</li>
+<li>用Walk-Forward Validation做滚动回测，模拟真实交易环境</li>
+<li>分离样本内（训练）和样本外（测试）数据，避免偷看未来</li>
+<li>计算更多风险指标：最大回撤、在险价值（VaR）、预期损失（ES）</li>
+</ul>
+<p>还有心态的变化。</p>
+<p>以前的她，会因为一两次亏损而焦虑，会忍不住想加大仓位”把亏的赚回来”。</p>
+<p>现在的她，学会了把交易看成概率游戏。</p>
+<p><strong>单次交易的盈亏不重要，长期的期望值才重要。</strong></p>
+<p>只要期望值为正，只要风控做到位，只要执行足够纪律——</p>
+<p>时间会站在她这边。</p>
+<p>「奥丁。」</p>
+<p>她低头看着怀里的兔子。</p>
+<p>奥丁抬起头，黑葡萄一样的眼睛望着她。</p>
+<p>「谢谢你。虽然你的行为不能预测市场……但是陪着我一起学习，也很重要。」</p>
+<p>她从口袋里掏出一根胡萝卜条——这是她早就准备好的。</p>
+<p>今天是值得庆祝的日子。</p>
+<p>奥丁接过胡萝卜，咔嚓咔嚓地吃起来。</p>
+<p>多惠的嘴角微微上扬。</p>
+<p>她打开手机，看到群聊里有咲刚发的截图。</p>
+<p>87.3%。</p>
+<p>「有咲的模型……也取得突破了呢。」</p>
+<p>她打下一行字：</p>
+<blockquote>
+<p><strong>多惠</strong>：87.3%……这个数字很好看。像一只毛色纯净的兔子。</p>
+</blockquote>
+<p>发送。</p>
+<p>然后她又看了一眼自己的收益曲线。</p>
+<p>8.7%这个月，加上之前几个月的积累……</p>
+<p>她的账户余额，已经从最初的20万日元（亏损后剩余），增长到了接近50万。</p>
+<p>还不够。</p>
+<p>但——</p>
+<p><em>“如果有一天，大家真的想一起做点什么……这笔钱，可以作为启动资金。”</em></p>
+<p>这个念头从她脑海里划过，然后又消失了。</p>
+<p>现在还太早。</p>
+<p>大家还在学习自己的专业，还在各自成长。</p>
+<p>但总有一天——</p>
+<p>多惠关掉电脑，抱着奥丁走向床边。</p>
+<p>窗外的雨变小了，隐隐约约能看到云层后面的一点星光。</p>
+<p>「晚安，奥丁。」</p>
+<p>「晚安，有咲的模型。」</p>
+<p>「晚安，未来也许会发生的事情。」</p>
+<hr>
+<h2 id="场景3-3：里美的突破——第一台DIY服务器"><a href="#场景3-3：里美的突破——第一台DIY服务器" class="headerlink" title="场景3-3：里美的突破——第一台DIY服务器"></a>场景3-3：里美的突破——第一台DIY服务器</h2><p>寒假第二周，牛込家。</p>
+<p>里美的房间里，弥漫着一股电子元器件特有的气味——金属、塑料、硅脂，还有一点点焊锡的余香。</p>
+<p>整个房间看起来像是被某种科技爆炸波及过：</p>
+<p>桌上摊着拆开的包装盒、防静电袋、说明书；</p>
+<p>地上散落着扎带、螺丝、各种转接线；</p>
+<p>床上堆着一摞关于电脑硬件的杂志和书籍。</p>
+<p>而穿着红色围裙的牛込里美，正趴在地板中央，认真地盯着面前那个敞开的机箱。</p>
+<p>「CPU散热器……已经装好了……」</p>
+<p>她小声自语，手里拿着一张写满了步骤的便利贴。</p>
+<blockquote>
+<p><strong>组装顺序（重要！）</strong></p>
+<ol>
+<li><del>安装CPU</del> ✓</li>
+<li><del>安装内存</del> ✓</li>
+<li><del>安装CPU散热器</del> ✓</li>
+<li><del>固定电源</del> ✓</li>
+<li><del>安装主板</del> ✓</li>
+<li>安装显卡 ← 现在这一步</li>
+<li>连接电源线</li>
+<li>整理走线</li>
+<li>开机测试！</li>
+</ol>
+</blockquote>
+<p>第六步。</p>
+<p>安装显卡。</p>
+<p>里美小心翼翼地拿起那张二手RTX 3080——她花了将近三个月的打工工资，才在某个二手市场上抢到的。</p>
+<p>10GB GDDR6X显存，320GB&#x2F;s带宽，8704个CUDA Cores，272个Tensor Cores。</p>
+<p>这些数字她已经背得滚瓜烂熟了。</p>
+<p>「好重……」</p>
+<p>她用双手托着显卡，感受着那份沉甸甸的分量。</p>
+<p>三风扇设计，散热鳍片层层叠叠，像是一座微型的散热工厂。</p>
+<p>她把显卡对准主板上的PCIe x16插槽，确认方向正确。</p>
+<p>然后——</p>
+<p>「请、请多关照……」</p>
+<p>她轻声对显卡说了一句，然后稳稳地将它按进插槽。</p>
+<p>“咔哒”。</p>
+<p>金手指完全插入，尾部的卡扣自动弹起锁定。</p>
+<p>「成功了……！」</p>
+<p>里美松了一口气，然后想起来这还没完。</p>
+<p>还要用螺丝把显卡固定在机箱支架上，还要连接显卡的辅助供电……</p>
+<p>「8pin加8pin……」</p>
+<p>她从电源线里找出两根PCIe供电线，插入显卡尾部的接口。</p>
+<p>然后是机箱风扇的线、前面板跳线、SATA数据线……</p>
+<p>半小时后，所有的线都连接完毕。</p>
+<p>里美后退一步，看着那台组装好的电脑。</p>
+<p><strong>巧克力0号机。</strong></p>
+<p>这是她给它起的名字。</p>
+<p>虽然机箱是黑色的，和巧克力不太像——但对里美来说，这台机器就是她最珍贵的”巧克力”。</p>
+<p>用自己的钱、自己的双手、一点一点搭建出来的。</p>
+<hr>
+<p><strong>【巧克力0号机 - 配置清单】</strong></p>
+<table>
+<thead>
+<tr>
+<th>部件</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CPU</td>
+<td>AMD Ryzen 7 5800X</td>
+<td>8核16线程，基础频率3.8GHz</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>NVIDIA RTX 3080</td>
+<td><strong>二手</strong>，10GB GDDR6X</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>64GB DDR4-3200</td>
+<td>2×32GB套条</td>
+</tr>
+<tr>
+<td>主板</td>
+<td>B550M</td>
+<td>Micro-ATX，够用</td>
+</tr>
+<tr>
+<td>存储</td>
+<td>1TB NVMe SSD</td>
+<td>读取3500MB&#x2F;s</td>
+</tr>
+<tr>
+<td>电源</td>
+<td>850W</td>
+<td>80Plus金牌，给30系显卡留足余量</td>
+</tr>
+<tr>
+<td>散热</td>
+<td>双塔风冷</td>
+<td>猫头鹰NH-D15S</td>
+</tr>
+<tr>
+<td>机箱</td>
+<td>mini塔式</td>
+<td>带3个12cm风扇</td>
+</tr>
+</tbody></table>
+<p><strong>总预算</strong>：约15万日元</p>
+<p>（其中显卡花了9万，是二手市场捡漏的价格）</p>
+<hr>
+<p>里美深吸一口气。</p>
+<p>最激动人心的时刻到了。</p>
+<p><strong>开机测试。</strong></p>
+<p>她伸出手，按下机箱上的电源键——</p>
+<p>风扇开始转动。</p>
+<p>主板的指示灯亮起来。</p>
+<p>显卡的RGB灯带发出幽幽的蓝光。</p>
+<p>屏幕——</p>
+<p>屏幕上出现了主板的LOGO，然后是POST自检画面。</p>
+<p>内存检测……通过。</p>
+<p>存储检测……通过。</p>
+<p>显卡检测……通过。</p>
+<p>然后，系统开始从SSD启动。</p>
+<p>几秒后，Linux的登录界面出现了。</p>
+<p>「成功了……！」</p>
+<p>里美的声音有点发颤。</p>
+<p>成功了。</p>
+<p>这台完全由她自己组装的电脑，成功启动了。</p>
+<p>没有蓝屏，没有报错，没有诡异的蜂鸣声。</p>
+<p>完美。</p>
+<p>她趴在地上，看着那个安静运转的机箱，眼眶有点发热。</p>
+<p>「你好……巧克力0号……」</p>
+<p>她轻声说，就像在和一个新朋友打招呼。</p>
+<p>「从今天起……请多关照了……」</p>
+<hr>
+<p>开机只是第一步。</p>
+<p>接下来是软件环境的配置——这才是真正的重头戏。</p>
+<p>里美打开终端，开始一步一步地安装深度学习需要的各种软件。</p>
+<p>首先是NVIDIA驱动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ <span class="hljs-built_in">sudo</span> apt install nvidia-driver-525<br>$ nvidia-smi<br></code></pre></td></tr></table></figure>
+
+<p>屏幕上跳出一个表格：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">+-----------------------------------------------------------------------------+<br>|<span class="hljs-string"> NVIDIA-SMI 525.60.11    Driver Version: 525.60.11    CUDA Version: 12.0     </span>|<br>|<span class="hljs-string">-------------------------------+----------------------+----------------------+</span><br><span class="hljs-string"></span>|<span class="hljs-string"> GPU  Name        Persistence-M</span>|<span class="hljs-string"> Bus-Id        Disp.A </span>|<span class="hljs-string"> Volatile Uncorr. ECC </span>|<br>|<span class="hljs-string"> Fan  Temp  Perf  Pwr:Usage/Cap</span>|<span class="hljs-string">         Memory-Usage </span>|<span class="hljs-string"> GPU-Util  Compute M. </span>|<br>|<span class="hljs-string">===============================+======================+======================</span>|<br>|<span class="hljs-string">   0  NVIDIA GeForce ...  Off  </span>|<span class="hljs-string"> 00000000:01:00.0  On </span>|<span class="hljs-string">                  N/A </span>|<br>|<span class="hljs-string">  0%   35C    P8    22W / 320W </span>|<span class="hljs-string">    512MiB / 10240MiB </span>|<span class="hljs-string">      0%      Default </span>|<br>+-------------------------------+----------------------+----------------------+<br></code></pre></td></tr></table></figure>
+
+<p>「显卡识别正常……温度35度……很好……」</p>
+<p>里美在笔记本上记下，然后继续。</p>
+<p>安装CUDA Toolkit：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ wget https://developer.download.nvidia.com/compute/cuda/12.0.0/local_installers/cuda_12.0.0_525.60.13_linux.run<br>$ <span class="hljs-built_in">sudo</span> sh cuda_12.0.0_525.60.13_linux.run<br></code></pre></td></tr></table></figure>
+
+<p>安装cuDNN：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ tar -xvf cudnn-linux-x86_64-8.x.x.x_cuda12-archive.tar.xz<br>$ <span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cp</span> cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include<br>$ <span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cp</span> -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64<br></code></pre></td></tr></table></figure>
+
+<p>安装PyTorch：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121<br></code></pre></td></tr></table></figure>
+
+<p>验证安装：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch<br><span class="hljs-meta">&gt;&gt;&gt; </span>torch.cuda.is_available()<br><span class="hljs-literal">True</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>torch.cuda.get_device_name(<span class="hljs-number">0</span>)<br><span class="hljs-string">&#x27;NVIDIA GeForce RTX 3080&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>「全部成功了……！」</p>
+<p>里美握紧拳头，忍不住小小地欢呼了一声。</p>
+<p>现在，该测试一下实际的训练性能了。</p>
+<p>她打开有咲之前发给她的Star-Tiny模型代码——有咲说过，”如果你组好了机器，可以帮我跑一下这个，看看速度怎么样”。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ python train.py --model star-tiny --batch_size 64 --fp16<br></code></pre></td></tr></table></figure>
+
+<p>训练开始。</p>
+<p>里美紧张地盯着屏幕上滚动的日志。</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nix">Epoch <span class="hljs-number">1</span><span class="hljs-symbol">/10</span> | Step <span class="hljs-number">100</span><span class="hljs-symbol">/1000</span> | <span class="hljs-params">Loss:</span> <span class="hljs-number">2.341</span> | <span class="hljs-params">Speed:</span> <span class="hljs-number">847</span> samples<span class="hljs-symbol">/sec</span><br>Epoch <span class="hljs-number">1</span><span class="hljs-symbol">/10</span> | Step <span class="hljs-number">200</span><span class="hljs-symbol">/1000</span> | <span class="hljs-params">Loss:</span> <span class="hljs-number">1.892</span> | <span class="hljs-params">Speed:</span> <span class="hljs-number">863</span> samples<span class="hljs-symbol">/sec</span><br>...<br></code></pre></td></tr></table></figure>
+
+<p><strong>847 samples&#x2F;sec。</strong></p>
+<p>里美飞快地在脑子里计算——有咲说她在实验室的老服务器上跑，速度大概是每秒450个样本。</p>
+<p>847比450……快了将近一倍！</p>
+<p>「果然……3080的Tensor Cores比旧显卡强很多……」</p>
+<p>她兴奋地打开手机，给有咲发消息：</p>
+<blockquote>
+<p><strong>里美</strong>：有咲酱！我的机器组好了！<br><strong>里美</strong>：刚刚测了一下，Star-Tiny的训练速度是847 samples&#x2F;sec<br><strong>里美</strong>：比你说的实验室服务器快了好多……！<br><strong>里美</strong>：[截图]</p>
+</blockquote>
+<p>消息发出去后，里美突然有些忐忑。</p>
+<p>会不会太兴奋了？有咲酱会不会觉得她在炫耀？</p>
+<p>正担心着，回复来了。</p>
+<blockquote>
+<p><strong>有咲</strong>：……不错。<br><strong>有咲</strong>：3080的FP16吞吐确实比实验室那些老T4强。Tensor Cores第三代对矩阵乘法优化得更好。<br><strong>有咲</strong>：等等，你说你的机器组好了？</p>
+</blockquote>
+<blockquote>
+<p><strong>里美</strong>：嗯！花了一整天，但是成功了！<br><strong>里美</strong>：我给它取名叫”巧克力0号”……</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：……为什么是巧克力？</p>
+</blockquote>
+<blockquote>
+<p><strong>里美</strong>：因为……它是我最珍贵的东西……和巧克力一样……</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：………………</p>
+</blockquote>
+<p>长时间的沉默。</p>
+<p>里美紧张地盯着屏幕，不知道自己说错了什么。</p>
+<p>然后有咲的消息来了。</p>
+<blockquote>
+<p><strong>有咲</strong>：你那个机器……如果愿意的话……<br><strong>有咲</strong>：我可以借用一下吗。<br><strong>有咲</strong>：实验室的排队太长了，我有些实验想在本地跑。</p>
+</blockquote>
+<p>里美瞬间眼睛亮了。</p>
+<blockquote>
+<p><strong>里美</strong>：当然可以！！<br><strong>里美</strong>：有咲酱随时都可以来用！！<br><strong>里美</strong>：我会帮你维护好的！！</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：……行。<br><strong>有咲</strong>：那我这周末过来一趟。<br><strong>有咲</strong>：你把SSH配置好，我也可以远程连。</p>
+</blockquote>
+<blockquote>
+<p><strong>里美</strong>：SSH？</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：远程登录协议。算了，等我过去再教你。</p>
+</blockquote>
+<blockquote>
+<p><strong>里美</strong>：好的！！我会准备好巧克力零食的！！</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：我说的不是吃的那种巧克力……<br><strong>有咲</strong>：算了，你准备也行。</p>
+</blockquote>
+<p>里美放下手机，开心得在房间里转了两圈。</p>
+<p>有咲酱要来用她组装的电脑了！</p>
+<p>这意味着她做的东西……真的有用！</p>
+<p>真的能帮到有咲酱！</p>
+<p>「巧克力0号……」</p>
+<p>她蹲在机箱旁边，认真地对它说：</p>
+<p>「有咲酱要来用你了哦。要乖乖的，不可以出问题哦。」</p>
+<p>机箱里的风扇平稳地转动着，像是在回应她的话。</p>
+<hr>
+<h2 id="场景3-4：沙绫的突破——第一次成功的法律援助"><a href="#场景3-4：沙绫的突破——第一次成功的法律援助" class="headerlink" title="场景3-4：沙绫的突破——第一次成功的法律援助"></a>场景3-4：沙绫的突破——第一次成功的法律援助</h2><p>二月中旬，大学法律诊所。</p>
+<p>这是法学部为学生提供实践机会的场所——在指导教授的监督下，高年级学生可以为校内外人员提供免费的基础法律咨询。</p>
+<p>山吹沙绫坐在小小的接待室里，面前摆着一份厚厚的文件。</p>
+<p>对面坐着三个年轻人——两男一女，看起来都是学生模样，表情焦虑而紧张。</p>
+<p>「所以……你们即将和投资人签署这份投资协议？」沙绫翻看着文件，声音温和。</p>
+<p>「是的。」其中一个戴眼镜的男生开口，「我们做了一个校园外卖整合平台，有投资人看中了我们，愿意投资50万。」</p>
+<p>「但是……说实话，我们看不太懂这些条款，」另一个男生挠挠头，「想请专业人士帮忙看看，有没有什么问题。」</p>
+<p>沙绫点点头，继续阅读那份Term Sheet。</p>
+<p>随着阅读的深入，她的眉头越皱越紧。</p>
+<p>「请问……有什么问题吗？」女生小心翼翼地问。</p>
+<p>「问题……有一些。」</p>
+<p>沙绫放下文件，指向其中一段条款：</p>
+<p>「首先，是这里——第三条，’知识产权条款’。」</p>
+<p>三人同时探过身来看。</p>
+<p>沙绫念道：「’乙方（即创业团队）同意将公司运营过程中产生的所有知识产权，包括但不限于软件代码、商标、专利、商业秘密等，独家且永久性地授权给甲方（即投资人）使用。甲方有权对上述知识产权进行任何形式的商业化利用，乙方不得提出异议。’」</p>
+<p>她抬起头，看着三人：「你们理解这段话的意思吗？」</p>
+<p>三人面面相觑，表情迷茫。</p>
+<p>「简单来说，」沙绫的声音依然温和，但带着一丝严肃，「这段话的意思是——你们做出的所有东西，版权都归投资人所有。<strong>永久性的。</strong>」</p>
+<p>「……诶？」</p>
+<p>「不光是现在的代码，还包括你们未来开发的所有内容。只要是’公司运营过程中产生的’，统统归投资人。」</p>
+<p>戴眼镜的男生脸色瞬间变白：「这……我们完全没注意到……」</p>
+<p>「还有这里。」沙绫翻到下一页，「第七条，’回购权条款’。」</p>
+<p>「’若乙方在投资完成后36个月内未能实现以下经营目标：(1)月活用户超过10万；(2)月营收超过50万日元——则甲方有权以原始投资额的1.5倍价格，回购乙方持有的全部股份。’」</p>
+<p>她合上文件，看着三人的眼睛：「你们知道这意味着什么吗？」</p>
+<p>「回购股份……」女生喃喃道，「是说投资人把我们的股份买走？」</p>
+<p>「对。而且是<strong>强制性的</strong>。」沙绫的语气加重了一些，「如果你们三年内没达到那两个目标，投资人可以花75万日元（50万×1.5）把你们踢出去。」</p>
+<p>「你们自己创立的公司，你们自己写的代码——最后可能完全不属于你们。」</p>
+<p>死一般的沉默。</p>
+<p>三个年轻人的脸色从白变青，又从青变白。</p>
+<p>「我们……我们差点就签了……」戴眼镜的男生声音发抖，「如果不是来这里咨询……」</p>
+<p>「这……这合法吗？」另一个男生问，「这种条款也能写进合同里？」</p>
+<p>沙绫叹了口气：「严格来说，只要双方自愿签订，这些条款就是有效的。法律不会禁止你签对自己不利的合同。」</p>
+<p>「但是——」</p>
+<p>她话锋一转：「这些条款的存在，说明对方是一个<strong>非常精明且强势</strong>的投资人。他在利用你们缺乏经验的弱点。」</p>
+<p>「如果你们真的想要这笔投资，我建议你们<strong>重新谈判</strong>。至少要把这几个条款改掉。」</p>
+<p>她拿出一张纸，开始写：</p>
+<p>「第一，知识产权条款——应该改成’授权’而非’转让’，而且要限定范围，只包括和业务直接相关的部分，不能延伸到未来所有的开发成果。」</p>
+<p>「第二，回购权条款——1.5倍的价格太离谱了，要么删除这个条款，要么改成按照公司实际估值回购，而且要给乙方优先拒绝权。」</p>
+<p>「第三，你们的合同里还缺少很多保护创始人的条款——比如反稀释保护、优先清算权的上限、创始人的否决权……这些都要加进去。」</p>
+<p>她写完后，把纸推到三人面前。</p>
+<p>「这是我列出来的12个需要修改的条款。我还写了一份修改建议书的草稿，你们可以带回去参考。」</p>
+<p>三人接过那张纸，表情从绝望逐渐变成震惊，然后变成感激。</p>
+<p>「谢谢……真的太感谢了……」女生眼眶有些泛红，「如果不是你的话，我们可能就这样签了……」</p>
+<p>「不客气。」沙绫微笑着，「这就是法律诊所存在的意义——帮助不了解法律的人避开陷阱。」</p>
+<p>她站起身，送三人走向门口。</p>
+<p>临别时，她补充道：</p>
+<p>「以后签任何文件之前，请一定找专业人士审核。<strong>合同是用来保护双方的，但前提是你要能看懂它在保护什么。</strong>」</p>
+<p>「我们记住了！」</p>
+<p>三人深深鞠躬，然后离开了。</p>
+<hr>
+<p>目送他们的背影消失在走廊尽头后，沙绫才允许自己小小地松了口气。</p>
+<p>她靠在门框上，感觉心跳还有些快。</p>
+<p>那是她第一次独立完成一个完整的咨询案例——从接待、阅读文件、分析问题，到给出建议、起草修改方案。</p>
+<p>虽然有指导教授在旁边监督，但大部分工作都是她自己做的。</p>
+<p>而且——</p>
+<p>她真的帮到了别人。</p>
+<p>那三个学生，如果签了那份合同，几乎肯定会在未来的某一天后悔。</p>
+<p>但现在，他们有机会重新谈判，争取更公平的条款。</p>
+<p>「保护到别人了呢……」</p>
+<p>她轻声说，嘴角不自觉地上扬。</p>
+<p>这就是她想做的事。</p>
+<p>学习法律、理解法律、运用法律——</p>
+<p>不是为了赢官司，不是为了赚大钱——</p>
+<p>是为了在重要的人需要的时候，能够站出来说：</p>
+<p><strong>「没关系，交给我。」</strong></p>
+<p>虽然现在还只是帮助陌生人……</p>
+<p>但总有一天——</p>
+<p>手机震动了一下。</p>
+<p>是群聊的消息。</p>
+<blockquote>
+<p><strong>香澄</strong>：沙绫——！今天怎么样！法律诊所忙不忙！</p>
+</blockquote>
+<p>沙绫笑着回复：</p>
+<blockquote>
+<p><strong>沙绫</strong>：今天帮一个创业团队审了合同，发现了很多问题，帮他们列了修改建议。<br><strong>沙绫</strong>：感觉……学到的东西真的派上用场了。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：好厉害——！！沙绫保护了别人！！<br><strong>香澄</strong>：这就是沙绫的超能力！！</p>
+</blockquote>
+<blockquote>
+<p><strong>沙绫</strong>：什么超能力……只是普通的法律知识而已。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：法律知识就是超能力！！<br><strong>香澄</strong>：大家不会的事情沙绫会，那就是超能力！！</p>
+</blockquote>
+<p>沙绫看着那几行字，感到一股暖流涌上心头。</p>
+<blockquote>
+<p><strong>沙绫</strong>：谢谢你，香澄。<br><strong>沙绫</strong>：以后……如果大家需要的话，我会一直努力学习的。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：好——！约定了！！</p>
+</blockquote>
+<p>「约定了。」</p>
+<p>沙绫小声重复着，把手机收进口袋。</p>
+<p>走出法律诊所的大门时，外面的阳光正好。</p>
+<p>二月的风还有些冷，但她一点都不觉得。</p>
+<hr>
+<h2 id="场景3-5：香澄的突破——第一次成功的策划"><a href="#场景3-5：香澄的突破——第一次成功的策划" class="headerlink" title="场景3-5：香澄的突破——第一次成功的策划"></a>场景3-5：香澄的突破——第一次成功的策划</h2><p>三月，学校文化节。</p>
+<p>食堂前的广场上，临时搭建的小舞台被人群围得水泄不通。</p>
+<p>台上，一个女孩抱着红色的吉他，对着麦克风笑得像太阳一样灿烂。</p>
+<p>「大家好——！我是户山香澄！！」</p>
+<p>人群中响起稀稀拉拉的欢呼声——大部分是路过被吸引过来的学生，并不认识她。</p>
+<p>但这不重要。</p>
+<p>重要的是——</p>
+<p><strong>“用音乐连接校园每一个角落”活动，终于实现了。</strong></p>
+<hr>
+<p>这一次，和上一年那个被教授否决的”白日梦”版本完全不同。</p>
+<p>香澄花了三个月时间，重新设计了整个策划案。</p>
+<p>她做的第一件事，是<strong>缩小规模</strong>。</p>
+<p>原本的方案是”在校园每个角落都设置音乐点”——这太不现实了。</p>
+<p>新方案只选择了三个固定场地：食堂前广场、图书馆门口的花坛、宿舍区的小凉亭。</p>
+<p>都是人流量大、噪音影响可控的地方。</p>
+<p>她做的第二件事，是<strong>详细计算预算</strong>。</p>
+<p>这一点是沙绫帮忙的——沙绫发给她一个预算表模板，教她怎么一项一项列出支出。</p>
+<p>音响租赁、延长线、宣传海报打印、矿泉水、一次性雨棚（备用）……</p>
+<p>每一笔钱都有来源、有去向。</p>
+<p>最后总额控制在学生会的活动经费拨款范围内，还略有结余。</p>
+<p>她做的第三件事，是<strong>制定应急预案</strong>。</p>
+<p>这一点是有咲”帮忙”的——准确地说，是有咲吐槽出来的。</p>
+<p>当时香澄兴冲冲地把新方案发给大家看，有咲的第一反应是：</p>
+<p><em>「如果下雨怎么办？」</em></p>
+<p><em>「如果音响坏了怎么办？」</em></p>
+<p><em>「如果没有人来看怎么办？」</em></p>
+<p><em>「如果有人投诉噪音怎么办？」</em></p>
+<p>香澄一开始还有些沮丧——怎么有咲看什么都是问题！</p>
+<p>但后来她冷静下来一想，有咲说得对。</p>
+<p>这些都是可能发生的事情，如果不提前准备，真的发生时就会手忙脚乱。</p>
+<p>于是她加了一份”风险评估与对策”附页：</p>
+<blockquote>
+<p><strong>风险1</strong>：下雨<br><strong>概率</strong>：中（三月东京降水概率约30%）<br><strong>对策</strong>：准备一次性雨棚；如果大雨，转移至室内小礼堂（已提前预约备用时段）</p>
+</blockquote>
+<blockquote>
+<p><strong>风险2</strong>：设备故障<br><strong>概率</strong>：低<br><strong>对策</strong>：提前一天测试所有设备；准备备用音响一套</p>
+</blockquote>
+<blockquote>
+<p><strong>风险3</strong>：观众过少<br><strong>概率</strong>：中<br><strong>对策</strong>：提前一周开始宣传；联合学生会官方账号推广</p>
+</blockquote>
+<blockquote>
+<p><strong>风险4</strong>：噪音投诉<br><strong>概率</strong>：低<br><strong>对策</strong>：控制音量在规定分贝以下；选择远离教学楼的场地；提前告知周围教室</p>
+</blockquote>
+<p>教授看到这份新方案时，露出了有些惊讶的表情。</p>
+<p>「户山同学，这份策划……比上次成熟太多了。」</p>
+<p>「真的吗！！」香澄眼睛亮了。</p>
+<p>「预算、人员分工、时间表、备选方案，都考虑到了。这才是把想法变成现实的正确方法。」</p>
+<p>他在方案上签了字，表示批准。</p>
+<hr>
+<p>然后就是今天。</p>
+<p>文化节当天。</p>
+<p>香澄站在舞台上，看着台下那些好奇的面孔。</p>
+<p>大部分人不认识她，不知道Poppin’Party是什么，甚至可能只是路过买饭顺便看一眼。</p>
+<p>但没关系。</p>
+<p><strong>因为这就是”传播”的起点。</strong></p>
+<p>从零开始，把心跳传递出去。</p>
+<p>让一个陌生人停下脚步。</p>
+<p>让他的耳朵捕捉到音乐。</p>
+<p>让他的心跳开始和旋律同频。</p>
+<p>然后——</p>
+<p>也许他会成为下一个来听Live的观众。</p>
+<p>也许他会把这首歌分享给朋友。</p>
+<p>也许他会在某一个难过的日子，突然想起今天在广场上听到的那个旋律。</p>
+<p><strong>这就是传播的力量。</strong></p>
+<p>香澄深吸一口气，手指落在琴弦上。</p>
+<p>「大家——不管你正在吃饭、在赶作业、还是刚刚失恋——」</p>
+<p>她笑得像四月的阳光：</p>
+<p>「希望这首歌，能让你闪闪发光一整天！！」</p>
+<p>音乐响起。</p>
+<p>她的声音在广场上回荡，穿过人群，飘向远方。</p>
+<p>台下，有人开始跟着节奏轻轻摇摆。</p>
+<p>有人掏出手机录像。</p>
+<p>有人露出了笑容。</p>
+<p>香澄看着那些表情，眼眶有点发热。</p>
+<p><em>成功了。</em></p>
+<p><em>这一次，终于成功了。</em></p>
+<p>不是”白日梦”，是<strong>真正实现的梦想</strong>。</p>
+<hr>
+<p>演出结束后，教授找到了她。</p>
+<p>「户山同学。」</p>
+<p>「是！」</p>
+<p>「我刚才在台下看了一会儿。」他推了推眼镜，「你的演出……确实有感染力。」</p>
+<p>「真的吗！！」</p>
+<p>「但更让我欣赏的，是你这次的执行能力。」</p>
+<p>他指了指舞台旁边——那里整齐地摆放着备用设备、饮用水、应急药箱，还有一个写着时间表的白板。</p>
+<p>「你不只是上台唱歌，你还把整个活动组织好了。提前一周宣传、设备测试、人员分工、应急预案……这些’无聊的工作’，你全都做了。」</p>
+<p>「这就是我当初说的——把热情转化为执行力。」</p>
+<p>香澄用力点头，感觉眼泪快要掉下来了。</p>
+<p>「我……我记住了……！」</p>
+<p>「好。」教授难得地笑了笑，「继续加油。你有让人跟着你走的能力——这是稀缺的天赋。但也要继续学习怎么把路修好。」</p>
+<p>「是！！！」</p>
+<p>目送教授离开后，香澄蹲在舞台边上，抱着吉他，小声抽泣了起来。</p>
+<p>不是难过。</p>
+<p>是高兴。</p>
+<p>太高兴了。</p>
+<p>她掏出手机，给群聊发了一条消息：</p>
+<blockquote>
+<p><strong>香澄</strong>：大——成——功——！！！<br><strong>香澄</strong>：文化节演出顺利完成！！！<br><strong>香澄</strong>：教授说我”把热情转化为执行力”了！！！<br><strong>香澄</strong>：呜呜呜好高兴(இдஇ)</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：……你在哭？</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：是高兴的眼泪！！</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：这种事情也要发群里吗……</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：要的！！因为想第一时间告诉大家！！</p>
+</blockquote>
+<blockquote>
+<p><strong>里美</strong>：香澄酱好厉害……恭喜……！</p>
+</blockquote>
+<blockquote>
+<p><strong>沙绫</strong>：预算表果然派上用场了对吧？</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：超级派上用场！！沙绫教的太有用了！！</p>
+</blockquote>
+<blockquote>
+<p><strong>多惠</strong>：香澄的活动……变得像一只长大的兔子了。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：？？？</p>
+</blockquote>
+<blockquote>
+<p><strong>多惠</strong>：以前是小兔子，只会蹦蹦跳跳。现在学会了挖洞、储存食物、规划领地。这是成熟的表现。</p>
+</blockquote>
+<blockquote>
+<p><strong>有咲</strong>：请正常说话。</p>
+</blockquote>
+<blockquote>
+<p><strong>多惠</strong>：我是在夸奖。</p>
+</blockquote>
+<blockquote>
+<p><strong>香澄</strong>：谢谢多惠！虽然不太懂但是感觉被夸了！！</p>
+</blockquote>
+<p>香澄看着那些消息，笑得停不下来。</p>
+<p>抬头望向天空，三月的阳光温暖而明亮。</p>
+<p>她深深地吸了一口气，把这份喜悦刻进心里。</p>
+<p><em>第一次……</em></p>
+<p><em>第一次用自己的力量，把想做的事情变成了现实……</em></p>
+<p><em>这种感觉……</em></p>
+<p><em>真的好闪闪发光……</em></p>
+<hr>
+<h2 id="场景3-6：CiRCLE后台——关于未来的闲聊"><a href="#场景3-6：CiRCLE后台——关于未来的闲聊" class="headerlink" title="场景3-6：CiRCLE后台——关于未来的闲聊"></a>场景3-6：CiRCLE后台——关于未来的闲聊</h2><p>三月末，CiRCLE Live House。</p>
+<p>晚上九点，演出刚刚结束。</p>
+<p>后台的休息室里，五个女孩瘫在沙发上，每个人都汗涔涔的，但脸上都带着满足的笑容。</p>
+<p>「今天的Live好开心——！」香澄抱着吉他，眼睛还在发亮。</p>
+<p>「你每次都说开心……」有咲把毛巾盖在脸上，声音有些闷，「一共说了三百遍了吧。」</p>
+<p>「因为每次都很开心嘛！」</p>
+<p>「你这个人真的是……」</p>
+<p>沙绫笑着递过来几瓶水：「大家辛苦了，先喝点水吧。」</p>
+<p>「谢谢沙绫～」</p>
+<p>里美接过水瓶，小口小口地喝着，还不忘把自己的巧克力饼干递给旁边的有咲。</p>
+<p>多惠在角落里抱着手机，盯着屏幕。手机屏幕上，隐约能看到跳动的K线图。</p>
+<p>「多惠，你在看什么？」香澄好奇地探头。</p>
+<p>「行情。」多惠头都没抬，「刚才演出的时候，BTC涨了2%。」</p>
+<p>「Live的时候你还在看行情吗！！」</p>
+<p>「只是设了个价格提醒。」多惠平静地说，「没有影响演出。」</p>
+<p>有咲从毛巾下面露出一只眼睛：「然后呢？涨了2%你要怎么做？」</p>
+<p>「什么都不做。」多惠关掉手机，「不在我的入场条件内。」</p>
+<p>「……你现在居然学会忍住不操作了？」</p>
+<p>「嗯。这是市场教我的第二课——什么时候不做比什么时候做更重要。」</p>
+<p>有咲挑了挑眉，重新把毛巾盖回脸上，但语气里带了一丝认可：「……进步了啊。」</p>
+<p>「谢谢。」</p>
+<p>气氛慢慢变得轻松起来。</p>
+<p>大家开始聊这几个月各自的事情——</p>
+<p>有咲说她的Star-Tiny模型得到了导师的认可，准备下学期尝试更大规模的训练；</p>
+<p>多惠说她的策略已经连续三个月正盈利，虽然收益不算高，但夏普比率稳定在2以上；</p>
+<p>里美说她的”巧克力0号机”运转良好，已经帮有咲跑了好几次实验，没出过故障；</p>
+<p>沙绫说她在法律诊所接了更多案子，开始有学弟学妹来找她请教；</p>
+<p>香澄说她的文化节活动成功了，教授终于不再说她”太天真”。</p>
+<p>「感觉……大家都变厉害了呢。」里美小声感叹。</p>
+<p>「是啊……」香澄点点头，然后突然愣住了。</p>
+<p>「香澄？」沙绫注意到她的表情变化，「怎么了？」</p>
+<p>「我在想……」香澄的眼神变得有些恍惚，像是在看某个很远的地方。</p>
+<p>「有咲做AI……里美做机器……多惠管钱……沙绫管法律……我管……传达……」</p>
+<p>「你在嘀咕什么？」有咲掀开毛巾。</p>
+<p>「我在想啊……」香澄转过头，看着四个人，眼睛里有什么东西在闪烁：</p>
+<p>「如果有一天——」</p>
+<p>「我们把大家的能力，合在一起——」</p>
+<p>「能不能做出什么……超级闪闪发光的东西？」</p>
+<p>短暂的沉默。</p>
+<p>沙绫微笑着问：「比如什么？」</p>
+<p>「比如……比如……」</p>
+<p>香澄皱着眉头努力思考，表情认真得像是在做高数题：</p>
+<p>「一个能让全世界心跳的东西！！」</p>
+<p>「……太模糊了。」有咲吐槽，「你每次说的都是’心跳’’闪闪发光’，能不能具体一点？」</p>
+<p>「我也不知道具体是什么……！但就是感觉……如果大家在一起的话……一定能做到什么很厉害的事情……！」</p>
+<p>「凭感觉做商业决策可是会破产的。」</p>
+<p>「我知道啦——！所以才说是’如果有一天’嘛！！」</p>
+<p>有咲叹了口气，但并没有反驳。</p>
+<p>因为说实话——</p>
+<p>她自己也想过类似的事情。</p>
+<p>如果……真的有那样一天的话……</p>
+<p>里美的声音小小的：「如果……如果大家需要机器的话……我可以帮忙组装和维护……」</p>
+<p>「我的服务器……可以借给大家用……」</p>
+<p>沙绫点点头：「无论大家想做什么，我都会帮忙处理法律相关的事情。公司注册、合同审核、知识产权保护……虽然还在学习，但我会努力的。」</p>
+<p>多惠抱着手机，淡淡地说：「把每个人的能力组合在一起……这在投资里叫’投资组合’。不同的资产有不同的风险收益特征，组合后可以分散风险、提高收益。」</p>
+<p>「所以……人也可以做投资组合吗？」香澄歪头。</p>
+<p>「可以这样理解。」多惠点头，「有咲是Alpha因子——能生产核心价值的稀缺资源。里美是基础设施——让Alpha落地的物理基础。我是风险管理——控制整体的波动和回撤。沙绫是合规和保护——防止外部风险的冲击。香澄是……」</p>
+<p>她顿了顿。</p>
+<p>「香澄是Beta——连接所有资产、放大整体收益的系统性力量。」</p>
+<p>「……我不太懂但是感觉被夸了？」</p>
+<p>「是夸奖。」多惠确认道，「Beta很重要。没有Beta，Alpha再高也无法传导到整个系统。」</p>
+<p>「好！！那我就做Beta！！」香澄握紧拳头。</p>
+<p>「你真的懂什么是Beta吗？」有咲怀疑地看着她。</p>
+<p>「完全不懂！」</p>
+<p>「那你答应得那么干脆是怎么回事……」</p>
+<p>香澄傻笑着挠挠头，然后突然认真起来：</p>
+<p>「但是——大家——」</p>
+<p>她看着面前的四个人，眼睛亮得像星星。</p>
+<p>「如果真的有那一天的话——你们愿意和我一起吗？」</p>
+<p>「一起做什么？」有咲问。</p>
+<p>「一起……创造一个闪闪发光的东西。」香澄的声音变轻了，但也变得坚定了，「具体是什么我还不知道。但是——」</p>
+<p>「我想和大家一起做。」</p>
+<p>「因为——」</p>
+<p>她的声音像是在说一个承诺：</p>
+<p>「一个人做不到的事情，五个人一起说不定就能做到。」</p>
+<p>「这不就是Poppin’Party的意义吗？」</p>
+<p>沉默。</p>
+<p>但不是沉重的沉默。</p>
+<p>而是某种酝酿的沉默——像是暴风雨前云层聚集的那种。</p>
+<p>有咲第一个开口，语气依然是傲娇的：</p>
+<p>「……白痴。」</p>
+<p>「诶？」</p>
+<p>「你什么具体计划都没有，就让我们答应你。这叫’空头支票’，知道吗。」</p>
+<p>「呜……有咲好严格……」</p>
+<p>「但是——」</p>
+<p>有咲移开视线，声音变小了一点：</p>
+<p>「如果……真的有那一天的话……」</p>
+<p>「我会……考虑一下的。」</p>
+<p>「真的吗！！」香澄一下子蹦起来。</p>
+<p>「我说的是’考虑’！不是答应！」</p>
+<p>「但是有咲没有拒绝！！」</p>
+<p>「你这个人是不是耳朵有问题……」</p>
+<p>沙绫笑着举起手：「我愿意。」</p>
+<p>「沙绫——！」</p>
+<p>「我选择法学，本来就是为了保护大家。如果有一天大家要一起做什么事业，我当然会参加。」</p>
+<p>里美也小声说：「我……我也愿意……如果能帮上忙的话……」</p>
+<p>多惠点头：「我也同意。把资源集中投入到高收益项目，是理性的选择。而且——」</p>
+<p>她抬起头，眼神比平时多了一点情绪：</p>
+<p>「和大家一起做的事情……收益之外还有效用。心理学叫这个’内在动机’。经济学叫’非货币效用’。」</p>
+<p>「通俗一点说就是……开心。」</p>
+<p>「多惠——！」香澄再次蹦起来，这次直接抱住了多惠。</p>
+<p>「和大家在一起做事情，比一个人做同样的事情开心。即使经济回报相同，心理回报更高。」多惠被抱着依然面无表情地解释，「这是有实验数据支持的。」</p>
+<p>「多惠说话好好听！！」</p>
+<p>「……我只是在陈述事实。」</p>
+<p>有咲看着那边抱成一团的两个人，还有在旁边笑着的沙绫和里美，忍不住叹了口气。</p>
+<p>但她的嘴角，也微不可察地上扬了。</p>
+<p><em>全世界心跳的东西……吗。</em></p>
+<p>她低头看着自己的掌心。</p>
+<p>写代码的手、调参数的手、让模型学会理解人类情感的手。</p>
+<p><em>如果……</em></p>
+<p><em>如果这双手能做的事情……</em></p>
+<p><em>能和大家的能力结合在一起的话……</em></p>
+<p>她没有说出口。</p>
+<p>但那颗种子，已经悄悄地在心里埋下了。</p>
+<hr>
+<h2 id="章节尾声"><a href="#章节尾声" class="headerlink" title="章节尾声"></a>章节尾声</h2><p>那一晚，五个人在后台聊到很晚。</p>
+<p>关于”如果有一天”的话题，没有具体的结论。</p>
+<p>没有人知道那一天会是什么时候，也没有人知道要做的”闪闪发光的东西”到底是什么。</p>
+<p>但——</p>
+<p>种子已经埋下了。</p>
+<p>在有咲写代码的深夜里。</p>
+<p>在多惠盯着K线图的专注中。</p>
+<p>在里美组装服务器的认真里。</p>
+<p>在沙绫阅读法律条文的安静中。</p>
+<p>在香澄对着无数陌生人唱歌的舞台上。</p>
+<p>五颗星星各自成长，各自发光。</p>
+<p>而终有一天——</p>
+<p>它们会交汇在一起，画出一幅谁都没有预料到的星图。</p>
+<p>那是大学第三年的春天。</p>
+<p>谁都不知道，这个”如果”——</p>
+<p>将在不久后变成现实。</p>
+<hr>
+<p><strong>第3章「Warming Up」—— 完</strong></p>
+<hr>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>STAR::BEAT Project 第三章</div>
+      <div>https://blog.arisa.best/2026/02/05/STAR-BEAT-Project-第三章/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Jjjjkooo</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>February 5, 2026</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              CC BY-NC-ND 4.0
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/02/05/STAR-BEAT-Project-%E7%AC%AC%E5%9B%9B%E7%AB%A0/" title="STAR::BEAT Project 第四章">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">STAR::BEAT Project 第四章</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/02/05/STAR-BEAT-Project-%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="STAR::BEAT Project 第二章">
+                        <span class="hidden-mobile">STAR::BEAT Project 第二章</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

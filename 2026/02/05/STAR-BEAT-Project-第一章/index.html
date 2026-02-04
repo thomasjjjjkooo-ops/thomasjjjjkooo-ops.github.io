@@ -1,0 +1,1292 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Jjjjkooo">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="STAR::BEAT Project第一大章「Compilation」—— 编译期：大学时代 第1章「#include &lt;future&gt;」—— 新的起点 场景1-1：开篇·四月的风四月的东京，仿佛被谁打翻了一整罐粉色颜料。 户山香澄走在通往大学的坡道上，书包带子被她攥得紧紧的。微风卷起几瓣樱花擦过她的脸颊，痒痒的，像是春天在跟她打招呼。 「好漂亮……」 她停下脚步，仰头望向头顶那片粉白">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STAR::BEAT Project 第一章">
+<meta property="og:url" content="https://blog.arisa.best/2026/02/05/STAR-BEAT-Project-%E7%AC%AC%E4%B8%80%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Jjjjkooo&#39;s Website">
+<meta property="og:description" content="STAR::BEAT Project第一大章「Compilation」—— 编译期：大学时代 第1章「#include &lt;future&gt;」—— 新的起点 场景1-1：开篇·四月的风四月的东京，仿佛被谁打翻了一整罐粉色颜料。 户山香澄走在通往大学的坡道上，书包带子被她攥得紧紧的。微风卷起几瓣樱花擦过她的脸颊，痒痒的，像是春天在跟她打招呼。 「好漂亮……」 她停下脚步，仰头望向头顶那片粉白">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-02-04T20:42:23.000Z">
+<meta property="article:modified_time" content="2026-02-04T20:58:45.855Z">
+<meta property="article:author" content="Jjjjkooo">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>STAR::BEAT Project 第一章 - Jjjjkooo&#39;s Website</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.arisa.best","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Jjjjkooo&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/my_banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="STAR::BEAT Project 第一章"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-02-05 04:42" pubdate>
+          February 5, 2026 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          10k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          87 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">STAR::BEAT Project 第一章</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="STAR-BEAT-Project"><a href="#STAR-BEAT-Project" class="headerlink" title="STAR::BEAT Project"></a>STAR::BEAT Project</h1><h2 id="第一大章「Compilation」——-编译期：大学时代"><a href="#第一大章「Compilation」——-编译期：大学时代" class="headerlink" title="第一大章「Compilation」—— 编译期：大学时代"></a>第一大章「Compilation」—— 编译期：大学时代</h2><hr>
+<h1 id="第1章「-include-」——-新的起点"><a href="#第1章「-include-」——-新的起点" class="headerlink" title="第1章「#include &lt;future&gt;」—— 新的起点"></a>第1章「#include <code>&lt;future&gt;</code>」—— 新的起点</h1><hr>
+<h2 id="场景1-1：开篇·四月的风"><a href="#场景1-1：开篇·四月的风" class="headerlink" title="场景1-1：开篇·四月的风"></a>场景1-1：开篇·四月的风</h2><p>四月的东京，仿佛被谁打翻了一整罐粉色颜料。</p>
+<p>户山香澄走在通往大学的坡道上，书包带子被她攥得紧紧的。微风卷起几瓣樱花擦过她的脸颊，痒痒的，像是春天在跟她打招呼。</p>
+<p>「好漂亮……」</p>
+<p>她停下脚步，仰头望向头顶那片粉白色的穹顶。</p>
+<p>明明已经看过十八年的樱花了，但今年的似乎格外不一样。是因为穿着崭新的大学校服吗？是因为背着装满新课本的包吗？还是因为——</p>
+<p><em>——因为，这是”高中毕业后”的第一个春天？</em></p>
+<p>这个念头划过脑海的瞬间，香澄的心脏突然猛跳了一下。</p>
+<p>高中毕业了。</p>
+<p>真的毕业了啊。</p>
+<p>花咲川的校门、走廊、教室、屋顶——还有那个放学后总是回荡着音乐的仓库——全都变成了”回忆”。而现在，她站在一条完全陌生的路上，要去一所完全陌生的学校。</p>
+<p>更重要的是……</p>
+<p>「大家，都去了不一样的地方呢。」</p>
+<p>她喃喃自语，声音被风吹散了一些。</p>
+<p>有咲考上了工科名校的计算机系——“别以为我是为了什么才选这个专业，只是正好有点兴趣而已”，她当时是这么说的，眼睛却在发亮。</p>
+<p>多惠进了经济学部——“因为我想搞清楚，为什么有时候胡萝卜会突然涨价”，这个理由到现在香澄也没太听懂。</p>
+<p>里美选择了电子工程——“如果我能学会做厉害的机器……也许能帮上大家的忙……”，她说这话的时候脸红得像煮熟的章鱼小丸子。</p>
+<p>沙绫则去了法学部——“我想学习保护大家的方式”，微笑着这么说的沙绫，那个瞬间简直帅得像漫画里走出来的。</p>
+<p>而她自己呢……</p>
+<p>香澄抬起头，看向前方校门上方的招牌——<strong>「传播学院」</strong>。</p>
+<p>想起高三那个选专业的夜晚，五个人窝在流星堂地下室，一边吃零食一边讨论志愿。</p>
+<p><em>『我呢——我想学能把心跳传递给更多人的东西！』</em></p>
+<p>当时的她是这样说的，眼睛冒着星星。</p>
+<p><em>『那你去学心脏外科啊。』</em></p>
+<p>有咲的吐槽精准得像打靶。</p>
+<p><em>『不是那个心跳啦！是Live的时候那种，观众和我们变成一体的——那种传递！』</em></p>
+<p><em>『你这样说的话……传播学怎么样？』</em></p>
+<p>是沙绫温柔地提出了这个建议。</p>
+<p><em>『传播……学？』</em></p>
+<p><em>『嗯。研究如何把信息和情感传递给更多人的学科。我觉得很适合香澄呢。』</em></p>
+<p><em>『哦哦——！听起来好厉害！就是它了！』</em></p>
+<p><em>『你这个决定也太草率了吧……！』</em></p>
+<p>现在想起来还是会笑出来。</p>
+<p>但香澄也知道，那个决定一点都不草率。</p>
+<p>她是真的想搞清楚——</p>
+<p><strong>“心跳”到底是怎样传递出去的。</strong></p>
+<p>如果能解开这个谜题，是不是就能把Poppin’Party的歌声、把大家演奏时的那种闪闪发光，传递给全世界呢？</p>
+<p>「传播学院……传递心跳的科学……！」</p>
+<p>她握紧拳头，眼睛重新燃起了火焰。</p>
+<p>然后——</p>
+<p>手机震动了。</p>
+<p>群聊【ぽぴぱ☆集合!!】有新消息。</p>
+<blockquote>
+<p><strong>有咲</strong>：现在发什么呆呢，快去上课<br><strong>有咲</strong>：别在入学第一天就迟到啊你</p>
+</blockquote>
+<p>香澄瞪大眼睛看了一眼时间，然后发出一声响彻整条樱花道的惨叫：</p>
+<p>「我要迟到了————！！」</p>
+<p>她撒腿狂奔，樱花瓣在身后扬起一小片粉色旋风。</p>
+<p><em>——不同的学校、不同的教室、不同的课程表……</em></p>
+<p><em>——听起来好像大家要去很远很远的地方。</em></p>
+<p><em>——但是没关系的！</em></p>
+<p><em>——因为——每周五的流星堂，每月的CiRCLE演出，还有那个永远不变的约定——</em></p>
+<p><em>——我们是Poppin’Party，我们要一起闪闪发光到永远！</em></p>
+<p><em>——所以这不是分离，是……是……</em></p>
+<p><em>——对了！是”并行处理”！有咲之前教我的词！</em></p>
+<p><em>——我们在不同的地方，同时变得更厉害，然后……</em></p>
+<p><em>——然后一起创造更大的心跳！</em></p>
+<p>她一边跑一边在心里给自己打气。</p>
+<p>脚步声混着心跳声，在四月的风里共鸣。</p>
+<p><strong>编译开始。</strong></p>
+<p><strong>#include <code>&lt;future&gt;</code></strong></p>
+<p><strong>——导入未来。</strong></p>
+<hr>
+<h2 id="场景1-2：五条轨道·入学日群像"><a href="#场景1-2：五条轨道·入学日群像" class="headerlink" title="场景1-2：五条轨道·入学日群像"></a>场景1-2：五条轨道·入学日群像</h2><hr>
+<h3 id="【户山香澄·传播学导论课·上午10-15】"><a href="#【户山香澄·传播学导论课·上午10-15】" class="headerlink" title="【户山香澄·传播学导论课·上午10:15】"></a>【户山香澄·传播学导论课·上午10:15】</h3><p>「——传播的本质，不是信息的单向输送，而是<strong>连接的建立</strong>。」</p>
+<p>讲台上的教授推了推眼镜，在黑板上写下一行大字。</p>
+<p><strong>「传播 &#x3D; 连接 × 共鸣」</strong></p>
+<p>「当一条信息能够触发接收者的情感共鸣时，传播才真正完成了它的使命。否则，只是噪音。」</p>
+<p>香澄坐在阶梯教室的中排位置，笔记本几乎要被她写穿。</p>
+<p>——传播等于连接乘以共鸣！</p>
+<p>——情感共鸣！</p>
+<p>——这不就是……！</p>
+<p>她在笔记本空白处画了一个大大的星星，旁边写上：<strong>「和Live的时候一样！！」</strong></p>
+<p>是的。</p>
+<p>当台上的她们演奏出心里的旋律，当台下的观众开始跟着挥舞荧光棒——那个瞬间，舞台和观众席之间的那道无形的墙壁就消失了。大家的心跳同步了。那不正是”连接乘以共鸣”吗？！</p>
+<p>「原来这是有科学道理的……！」她小声惊叹。</p>
+<p>旁边的同学好奇地瞥了她一眼，但香澄完全没注意到，她整个人都在闪闪发光。</p>
+<p>下课铃响起的瞬间，她就掏出手机，手指飞快地在屏幕上跳舞：</p>
+<blockquote>
+<p><strong>香澄</strong>：大！事！件！<br><strong>香澄</strong>：传播学超棒的！！！<br><strong>香澄</strong>：原来”让心跳传递出去”是一门科学！！<br><strong>香澄</strong>：教授说传播是”连接×共鸣”，这不就是我们开Live的时候在做的事吗！！<br><strong>香澄</strong>：感动到哭泣(இдஇ)<br><strong>有咲</strong>：上课不许玩手机<br><strong>香澄</strong>：已经下课了！！</p>
+</blockquote>
+<p>她看着手机屏幕，傻呵呵地笑了起来。</p>
+<p>虽然在不同的教室，但能随时和大家说话——这种感觉，真的很好。</p>
+<hr>
+<h3 id="【花园多惠·经济学原理课·上午10-30】"><a href="#【花园多惠·经济学原理课·上午10-30】" class="headerlink" title="【花园多惠·经济学原理课·上午10:30】"></a>【花园多惠·经济学原理课·上午10:30】</h3><p>「——因此，当供给不变的情况下，需求的增加必然导致均衡价格的上升。」</p>
+<p>教授在黑板上画了两条相交的曲线，一条向右下倾斜，一条向右上延伸。</p>
+<p>「这就是最基本的供需曲线。所有市场行为，归根结底都可以用这两条线的移动来解释。」</p>
+<p>多惠盯着那两条曲线，眨了眨眼。</p>
+<p>「……这条线。」她小声嘟囔。</p>
+<p>像什么呢？</p>
+<p>向右上延伸的那条，弧度很柔和，顶端微微翘起——</p>
+<p>「……像兔子的耳朵。」</p>
+<p>她旁边坐着一个戴眼镜的男生，听到这句话困惑地偏过头：「……你说什么？」</p>
+<p>多惠没有理他，自顾自地继续思考。</p>
+<p>如果把纵轴的”价格”换成”胡萝卜”……</p>
+<p>横轴的”数量”换成”兔子的食欲”……</p>
+<p>那么当天气变冷的时候，兔子会更容易饿——需求曲线右移——胡萝卜的均衡价格上涨。</p>
+<p>反过来，如果胡萝卜大丰收——供给曲线右移——价格下跌，兔子可以开心地吃到饱。</p>
+<p>「……原来如此。」</p>
+<p>她拿出笔记本，然而不是记笔记，而是认真地画了一只兔子。</p>
+<p>兔子旁边，她用工整的字迹标注：</p>
+<blockquote>
+<p><strong>Demand &#x3D; f(兔子的饥饿程度, 天气, 心情)</strong></p>
+<p><strong>Supply &#x3D; f(胡萝卜的产量, 季节, 奥丁有没有偷吃)</strong></p>
+</blockquote>
+<p>然后在最下方写下：</p>
+<blockquote>
+<p><strong>「兔子经济学·第一讲：供需曲线的生物学解释」</strong></p>
+</blockquote>
+<p>旁边的男生忍不住凑过来看了一眼，表情从困惑变成了震惊。</p>
+<p>多惠毫无所觉，依然沉浸在自己的世界里，又在兔子的耳朵旁边画了一个爱心。</p>
+<p>「今天的奥丁……应该不饿。因为早上吃了很多。」</p>
+<p>她自言自语地总结道，合上了笔记本。</p>
+<hr>
+<h3 id="【牛込里美·电路基础实验课·下午2-00】"><a href="#【牛込里美·电路基础实验课·下午2-00】" class="headerlink" title="【牛込里美·电路基础实验课·下午2:00】"></a>【牛込里美·电路基础实验课·下午2:00】</h3><p>实验室里弥漫着松香和焊锡的气味。</p>
+<p>里美坐在工位前，手里捏着一把电烙铁，面前是一块小小的电路板和几颗微型LED灯珠。</p>
+<p>她的手在抖。</p>
+<p>不是因为紧张……好吧，也有一点紧张。但更多的是——</p>
+<p><strong>兴奋。</strong></p>
+<p>很奇怪吧？明明只是最基础的焊接实验，小学生的科学社团都做过的那种。但当烙铁笔尖接触焊锡，银色的金属液体服帖地填满焊点的时候，里美感受到一种难以言喻的满足感。</p>
+<p>就好像……这些小小的零件，在听她的话。</p>
+<p>「第三个焊点……完成……」</p>
+<p>她小心翼翼地放下电烙铁，检查了一下焊接的效果。虽然不是非常漂亮，但连接很牢固，没有虚焊。</p>
+<p>然后——</p>
+<p>她深吸一口气，把电池接上。</p>
+<p>LED灯亮了。</p>
+<p>小小的红色光芒，在她眼前安静地燃烧。</p>
+<p>「亮、亮了……！」</p>
+<p>她的声音里带着一丝不敢相信的颤抖。</p>
+<p>明明只是一盏灯。明明是最简单的电路——电源、电阻、LED串联，构成一个闭合回路，电流通过的时候LED发光——中学物理就学过的原理。</p>
+<p>但这是她亲手焊出来的。</p>
+<p>她让它亮起来的。</p>
+<p>「……它亮了……是我……让它亮的……」</p>
+<p>里美盯着那盏小小的灯，突然想起了什么。</p>
+<p>有咲站在键盘后面，手指按下第一个和弦的瞬间——</p>
+<p>舞台灯光亮起来。</p>
+<p>音响开始震动。</p>
+<p>观众席里响起欢呼声。</p>
+<p>那个画面和眼前这盏小小的LED灯重叠在一起。</p>
+<p><em>——有咲chan……按下键盘的那一刻，她也是在”让什么东西亮起来”吧？</em></p>
+<p><em>——指令，传递，响应，发光。</em></p>
+<p><em>——电路……也是这样的呢……</em></p>
+<p>「……如果……」</p>
+<p>她轻声说出口，声音小得几乎只有自己能听见：</p>
+<p>「如果以后，能做更厉害的东西……能帮到有咲chan她们……能让她们的舞台变得更闪亮……」</p>
+<p>说到一半，她的脸腾地红了。</p>
+<p>什么啊，才刚入学第一天，想的也太远了吧！</p>
+<p>但她还是悄悄地拿出手机，拍了一张那盏亮着的LED灯的照片。</p>
+<p>然后在旁边新建了一条备忘录：</p>
+<blockquote>
+<p><strong>目标：学会做能帮助有咲chan的硬件</strong></p>
+<p><strong>第一步：把焊接技术练好……</strong></p>
+<p><strong>（要加油啊我！）</strong></p>
+</blockquote>
+<hr>
+<h3 id="【山吹沙绫·法学导论课·下午3-20】"><a href="#【山吹沙绫·法学导论课·下午3-20】" class="headerlink" title="【山吹沙绫·法学导论课·下午3:20】"></a>【山吹沙绫·法学导论课·下午3:20】</h3><p>「——法律是什么？」</p>
+<p>讲台上的教授扫视着阶梯教室里的新生，表情严肃得像一尊雕像。</p>
+<p>「是惩罚恶人的工具？是维持秩序的规则？还是统治阶级意志的体现？」</p>
+<p>教室里一片安静。</p>
+<p>「这些答案都不算错。但今天我想告诉你们另一个理解法律的角度——」</p>
+<p>他在黑板上写下几个大字：</p>
+<p><strong>「法律是盾牌」</strong></p>
+<p>「与其说法律是用来惩罚坏人的，不如说——它首先是用来<strong>保护好人</strong>的。保护他们的生命、财产、自由、尊严。让他们不必生活在恐惧之中。」</p>
+<p>沙绫的笔尖停在了纸上。</p>
+<p><strong>保护。</strong></p>
+<p>她反复咀嚼着这个词。</p>
+<p>这正是她选择法学的原因。</p>
+<p>从小到大，她一直都是”被依赖”的那个人。弟弟妹妹会在害怕打雷的夜晚钻进她被窝；朋友们会在遇到麻烦的时候第一时间找她商量；就连在乐队里，她也不知不觉成了那个”安心感担当”。</p>
+<p>但她心里清楚，”让人安心”和”真正保护得了别人”是两码事。</p>
+<p>如果——</p>
+<p>如果有一天，香澄她们遇到了什么真正的麻烦呢？</p>
+<p>不是乐器坏了、演出迟到这种小事，而是那种更大、更复杂、更需要专业知识才能解决的问题呢？</p>
+<p>那时候，她能做什么？</p>
+<p>只是说”没关系，会好起来的”吗？</p>
+<p>「不够。」她在心里说。</p>
+<p>光是温柔是不够的。</p>
+<p>她想成为那种——<strong>能撑起一把真正的伞</strong>的人。</p>
+<p>合同陷阱？她要能看穿。</p>
+<p>权利被侵犯？她要能捍卫。</p>
+<p>当大家不知所措的时候，她想能站出来说：</p>
+<p><strong>「没关系，交给我吧。」</strong></p>
+<p>然后真正地解决问题。</p>
+<p><em>——为了那一天……</em></p>
+<p>她在笔记本上认真地写下今天的日期，然后开始仔细记录教授讲的每一句话。</p>
+<p>笔记的角落里，她画了一个小小的盾牌标志，旁边写着：</p>
+<blockquote>
+<p><strong>「法律是盾牌。」</strong></p>
+<p><strong>「——我要学会使用它。」</strong></p>
+</blockquote>
+<p>下课的时候，手机震动了一下。</p>
+<p>是弟弟发来的消息：「姐姐！今天第一天上学怎么样！」</p>
+<p>她微笑着回复：「很好哦。学到了很重要的事情。你们乖乖的，回家给你们做好吃的。」</p>
+<p>发送完毕后，她才不紧不慢地开始收拾书包。</p>
+<p>回家的路上顺便去一趟超市吧——冰箱里的面粉应该不够了。</p>
+<hr>
+<h3 id="【市ヶ谷有咲·程序设计基础课·下午4-00】"><a href="#【市ヶ谷有咲·程序设计基础课·下午4-00】" class="headerlink" title="【市ヶ谷有咲·程序设计基础课·下午4:00】"></a>【市ヶ谷有咲·程序设计基础课·下午4:00】</h3><p>无聊。</p>
+<p>无聊透顶。</p>
+<p>有咲坐在教室最后一排的角落里，百无聊赖地撑着下巴，看着讲台上的教授在大屏幕上展示着——天哪——<strong>print(“Hello World”)</strong>。</p>
+<p>「这就是Python编程的第一步。当你让计算机成功打印出这行字的时候，你就已经迈入了编程世界的大门！」</p>
+<p>教授的声音很激动。</p>
+<p>新生们也很配合地发出”哦——“的声音。</p>
+<p>有咲觉得自己的灵魂正在离开身体。</p>
+<p><strong>这种东西，初中的时候就会了好吗！</strong></p>
+<p>她恨不得当场站起来离开，但理智告诉她这是必修课，不能翘。</p>
+<p>于是她做了一个叛逆的决定——</p>
+<p>打开自己的笔记本电脑。</p>
+<p>反正坐在最后一排，教授也看不见。</p>
+<p>她熟练地打开VS Code——深色主题，字体大小14，Fira Code连字符——开始继续写自己这几个月来一直在折腾的项目。</p>
+<p>一个小型的神经网络。</p>
+<p>准确地说，是一个尝试模仿人类对话的小型语言模型。</p>
+<p>连模型都算不上，顶多是个玩具。输入一句话，它会输出一句听起来勉强像是回应的句子——虽然经常驴唇不对马嘴。</p>
+<p>但有咲莫名其妙地对这个东西上瘾了。</p>
+<p>有时候她会想：如果这个破烂玩意儿能真的”理解”她在说什么，会是什么感觉？</p>
+<p>不是那种假装理解、其实只是在模式匹配的理解。</p>
+<p>是真正的——<strong>懂</strong>。</p>
+<p>啧，想什么呢。</p>
+<p>那种东西，目前的技术根本做不到吧。</p>
+<p>连那些发了顶会论文的大牛都没搞定的事，她一个刚入学的臭高中——刚入学的臭大学生，想什么呢。</p>
+<p>她摇了摇头，把注意力重新集中到代码上。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">SimpleLSTM</span>(nn.Module):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, vocab_size, embed_dim, hidden_dim</span>):<br>        <span class="hljs-built_in">super</span>().__init__()<br>        <span class="hljs-variable language_">self</span>.embedding = nn.Embedding(vocab_size, embed_dim)<br>        <span class="hljs-variable language_">self</span>.lstm = nn.LSTM(embed_dim, hidden_dim, batch_first=<span class="hljs-literal">True</span>)<br>        <span class="hljs-variable language_">self</span>.fc = nn.Linear(hidden_dim, vocab_size)<br>  <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, x</span>):<br>        x = <span class="hljs-variable language_">self</span>.embedding(x)<br>        out, _ = <span class="hljs-variable language_">self</span>.lstm(x)<br>        out = <span class="hljs-variable language_">self</span>.fc(out[:, -<span class="hljs-number">1</span>, :])<br>        <span class="hljs-keyword">return</span> out<br></code></pre></td></tr></table></figure>
+
+<p>不对，这个架构太简单了，根本学不到长距离的依赖关系……</p>
+<p>她皱着眉头，思考要不要试试加入Attention机制——最近那篇叫”Attention is All You Need”的论文她看了好几遍，虽然有些地方还是看不太懂……</p>
+<p>「同学？」</p>
+<p>一个声音突然在旁边响起。</p>
+<p>有咲吓得差点把笔记本电脑合上，整个人弹了起来。</p>
+<p>站在她旁边的是一个戴黑框眼镜的年轻男性，胸前挂着”助教”的牌子。</p>
+<p>完蛋。被发现上课偷偷写别的东西了。</p>
+<p>「我、我这是——」</p>
+<p>她手忙脚乱地想解释，但助教的目光已经落在了她的屏幕上。</p>
+<p>「……这是……PyTorch？」</p>
+<p>「嗯、嗯。」</p>
+<p>「nn.Module的子类……嵌入层、LSTM、全连接层……这是个序列模型的架构？」</p>
+<p>「是、是的……只是随便写写而已……」</p>
+<p>助教的眼镜反光了一下，有咲看不清他的表情。</p>
+<p>然后他说了一句让有咲大脑死机的话：</p>
+<p>「你是打算做NLP方向吗？这个架构，虽然还比较基础，但思路是对的。」</p>
+<p>「……诶？」</p>
+<p>「不过LSTM现在已经不是最优解了。你有听说过Transformer吗？」</p>
+<p>「Transformer……那篇Google的论文？」</p>
+<p>「对。Self-Attention机制，相比LSTM能更好地捕捉长距离依赖。如果你对语言模型感兴趣的话……」</p>
+<p>他从口袋里掏出一张名片，放在有咲桌上。</p>
+<p>「这是我们NLP实验室的联系方式。如果有兴趣，可以联系我们导师。」</p>
+<p>有咲的大脑依然处于宕机状态，只能机械地接过名片。</p>
+<p>「你叫什么名字？」</p>
+<p>「市、市ヶ谷……市ヶ谷有咲……」</p>
+<p>「市ヶ谷同学，记得联系我们。上课好好听，但课后多练习自己感兴趣的项目，这个方向是对的。」</p>
+<p>说完，助教就踱步走开了。</p>
+<p>有咲盯着手里的名片，上面印着：</p>
+<blockquote>
+<p><strong>「○○大学 人工智能研究所 自然语言处理实验室」</strong></p>
+</blockquote>
+<p>然后她低头看了一眼自己正在写的那堆乱七八糟的代码。</p>
+<p>脸，不知道为什么，开始发烫。</p>
+<p>「……才不是什么对的方向。」她小声嘟囔，把名片随手塞进口袋，「只是……只是正好瞎写的……」</p>
+<p>但她没有删掉那些代码。</p>
+<p>甚至在下课后，偷偷打开手机搜了一下”Transformer架构 入门教程”。</p>
+<p>屏幕上跳出来一大堆论文链接和博客文章，她随手点开一篇，标题是：</p>
+<p><strong>「Attention Is All You Need：揭开大语言模型革命的序幕」</strong></p>
+<p>她看着那个标题，心跳突然加速了一拍。</p>
+<p>然后——</p>
+<p>群聊【ぽぴぱ☆集合!!】又开始刷屏了。</p>
+<blockquote>
+<p><strong>香澄</strong>：大家大家！今天过得怎么样！！<br><strong>香澄</strong>：我超级期待周五的聚会！！<br><strong>香澄</strong>：要分享好多好多事情！！<br><strong>多惠</strong>：今天发现了经济学和兔子的共通点。<br><strong>沙绫</strong>：多惠chan一如既往呢……<br><strong>里美</strong>：我、我今天焊成功了一个LED！<br><strong>香澄</strong>：里美chan太厉害了！！<br><strong>香澄</strong>：有咲有咲！你那边怎么样？？</p>
+</blockquote>
+<p>有咲盯着屏幕，手指悬在键盘上方。</p>
+<p>想了想，她打下几个字：</p>
+<blockquote>
+<p><strong>有咲</strong>：普通。就那样。</p>
+</blockquote>
+<p>发送。</p>
+<p>然后手机又震动起来——是里美的私聊：</p>
+<blockquote>
+<p><strong>里美</strong>：有咲chan……今天真的没什么特别的吗？<br><strong>里美</strong>：我总觉得有咲chan会有很厉害的事情发生……</p>
+</blockquote>
+<p>有咲看着这条消息，眉毛跳了跳。</p>
+<p>这个家伙的第六感也太准了吧！</p>
+<p>她犹豫了一秒，还是回了一句：</p>
+<blockquote>
+<p><strong>有咲</strong>：……就是被一个助教说了两句话而已。不是什么大事。<br><strong>里美</strong>：诶？？什么话？？</p>
+</blockquote>
+<p>有咲看着里美发来的问号，能想象到她本人现在那副好奇又担心的表情。</p>
+<p>叹了口气。</p>
+<blockquote>
+<p><strong>有咲</strong>：回去再说。<br><strong>有咲</strong>：……到时候再跟你们讲。</p>
+</blockquote>
+<p>她把手机塞回口袋，收拾东西站起身。</p>
+<p>脑海里还回荡着助教那句话：</p>
+<p><em>“这个方向是对的。”</em></p>
+<p>还有她自己的那句心虚的自我否认：</p>
+<p><em>“才不是什么对的方向……”</em></p>
+<p>啊啊烦死了。</p>
+<p>耳朵为什么还在发烫啊。</p>
+<hr>
+<h2 id="场景1-3：流星堂·第一次大学生聚会"><a href="#场景1-3：流星堂·第一次大学生聚会" class="headerlink" title="场景1-3：流星堂·第一次大学生聚会"></a>场景1-3：流星堂·第一次大学生聚会</h2><hr>
+<p>周五傍晚。</p>
+<p>流星堂当铺的招牌在夕阳下泛着温暖的光泽。</p>
+<p>门口，户山香澄正以一种可能违反物理定律的方式蹦跶着。</p>
+<p>「好期待好期待好期待——！」</p>
+<p>「你能不能安静一会？」跟在她身后的有咲揉着太阳穴，「才分开一周而已，用得着这么夸张吗？」</p>
+<p>「一周已经像一个世纪那么长了！！」</p>
+<p>「你这个是严重的时间感知障碍吧……」</p>
+<p>门口的风铃发出清脆的响声，有咲的奶奶探出头来：「有咲，朋友们来了吗？地下室收拾好了哦。」</p>
+<p>「知道了。」</p>
+<p>有咲带着香澄绕到侧边的小门，推开那扇熟悉的入口。</p>
+<p>地下室的空气里混合着木头、乐器漆和某种难以言喻的”Poppin’Party专属气味”。五年了，这个味道从来没变过。</p>
+<p>沙绫已经到了，正在茶几上摆放自带的点心——是她家面包店的招牌菠萝包和咖啡。</p>
+<p>「欢迎回来，香澄、有咲。」她微笑着招呼。</p>
+<p>「沙绫——！这些是今天新鲜烤的吗！」香澄像只小动物一样扑过去。</p>
+<p>「嗯，下课后顺路回去做的。还热着呢。」</p>
+<p>「最喜欢沙绫了——！」</p>
+<p>楼梯上传来另外两组脚步声。</p>
+<p>「……打扰了。」里美探出脑袋，手里抱着一个便当盒，「那个、我也带了巧克力点心……虽然是买的……」</p>
+<p>「里美chan！」香澄热情地挥手。</p>
+<p>紧随其后的是多惠，她怀里抱着——</p>
+<p>「奥丁？！」有咲差点跳起来，「你把兔子也带来了？！」</p>
+<p>「嗯。」多惠面不改色，「奥丁也想参加聚会。」</p>
+<p>「它是兔子！」</p>
+<p>「兔子也是家庭成员。」</p>
+<p>「这个逻辑哪里对了啊！」</p>
+<p>奥丁在多惠怀里蹬了蹬腿，鼻子一抖一抖的，似乎对有咲的吐槽表示抗议。</p>
+<p>沙绫笑着打圆场：「没关系啦，奥丁很乖的，不会乱跑的吧？」</p>
+<p>「不会。」多惠点头，「而且它最近在学信号分析。」</p>
+<p>「等等你说什么？」</p>
+<p>在场四个人齐刷刷地看向她。</p>
+<p>多惠依然面无表情：「我在研究奥丁的行为是否能预测市场波动。初步结论是有一定相关性。」</p>
+<p>死一般的沉默。</p>
+<p>「……我们还是先吃东西吧。」沙绫说。</p>
+<hr>
+<p>点心时间过后，五个人围坐在沙发上，熟悉的画面回来了。</p>
+<p>香澄盘腿坐在中间，眼睛闪闪发亮。</p>
+<p>「那么！大学新生交流会，正式开始！」</p>
+<p>「谁要参加这种社交活动啊……」有咲吐槽，但还是没有离开座位。</p>
+<p>「有咲别闹了，快坐好！第一个——香澄！也就是我！来分享入学感想！」</p>
+<p>「为什么你来主持又你先说？」</p>
+<p>「因为我最期待嘛！」</p>
+<p>没办法反驳。</p>
+<p>香澄清了清嗓子，开始眉飞色舞地讲述她这一周的遭遇：</p>
+<p>「——然后然后！教授在黑板上写了一个超级厉害的公式——传播等于连接乘以共鸣！！」</p>
+<p>「那是公式吗……」有咲低声嘀咕。</p>
+<p>「有咲你听我说完！这不就是我们办Live的时候在做的事吗！这边是我们，这边是观众，中间靠着音乐连接起来，然后大家的心跳同步了——砰砰砰！这就是共鸣！是传播学！是科学！」</p>
+<p>她越说越激动，手舞足蹈得差点打翻茶杯。</p>
+<p>「原来把心跳传递给更多人，是真的能学的！如果我把传播学学好了，是不是就能让全世界的人都听到Poppin’Party的歌！」</p>
+<p>「世界征服的野心未免也太大了吧……」</p>
+<p>「有什么不行的！」</p>
+<p>有咲叹了口气，但嘴角微微翘起。</p>
+<p>这家伙，还是一点都没变。</p>
+<p>不管是高中还是大学，永远是那副”闪闪发光到让人移不开眼”的样子。</p>
+<p>「——好啦好啦，下一个！多惠！」香澄指向旁边。</p>
+<p>多惠抬起头，怀里的奥丁跟着她的动作摇晃了一下。</p>
+<p>「我发现了一件事。」</p>
+<p>「什么什么？」</p>
+<p>「经济学……」多惠顿了顿，「和养兔子很像。」</p>
+<p>又是令人窒息的沉默。</p>
+<p>「……你展开说说？」有咲的声音带着一丝无奈。</p>
+<p>「好。」多惠点头。</p>
+<p>「经济学有供需曲线。需求变多时，价格上升；供给变多时，价格下降。这是基本原理。」</p>
+<p>「嗯……」里美认真地点头，虽然她应该也不太懂。</p>
+<p>「兔子也是这样的。奥丁饿了会焦虑，焦虑就会乱跑，乱跑就会消耗更多体力，消耗体力就更饿——这是一个正反馈循环，会导致它的’胡萝卜需求曲线’急剧右移。」</p>
+<p>「所以……？」</p>
+<p>「所以，如果我能通过奥丁的行为，提前预测它的需求曲线变化……那我也许能用同样的方法，预测市场参与者的行为。」</p>
+<p>她的语气一如既往地平淡，但眼神里有某种认真的光芒。</p>
+<p>「我管这个叫’兔子因子’。目前还在测试阶段。」</p>
+<p>沙绫的表情复杂：「多惠chan……这个类比……意外地……很有道理？」</p>
+<p>「是吧。」多惠轻轻点头，「经济学教授让我们找生活中的供需案例。我交了一份兔子相关的报告，得了满分。」</p>
+<p>有咲张了张嘴，又闭上。</p>
+<p>她不知道该吐槽这是伪科学，还是该惊叹这家伙的脑回路已经进化到了凡人无法理解的境界。</p>
+<p>「那个……」里美小声举手，「也许……我可以分享一下吗……？」</p>
+<p>「里美chan！当然！」香澄热情地鼓励。</p>
+<p>里美的脸微微泛红，声音很轻：「今天……我在实验课上，焊成功了一个LED灯……」</p>
+<p>「我在群里看到了！超级厉害！」</p>
+<p>「没、没有那么厉害……只是最基础的焊接……但是……」</p>
+<p>她低下头，手指绞在一起：</p>
+<p>「灯亮起来的时候……我想到了有咲chan。」</p>
+<p>有咲愣住：「……我？」</p>
+<p>「嗯……」里美的声音更小了，「有咲chan按下键盘，舞台灯光就会亮起来……我做的LED亮起来的时候……感觉好像……好像能理解一点点那种感觉了……」</p>
+<p>她深吸一口气，鼓起勇气抬起头：</p>
+<p>「我想……如果以后我能做更厉害的东西……能帮大家的舞台变得更闪亮……」</p>
+<p>声音越来越小，像气球泄气一样。</p>
+<p>「……那个，说得太满了，对不起……」</p>
+<p>「里美chan——！！」香澄感动得眼眶都红了，扑过去抱住她，「这哪是说得太满！这是闪闪发光的梦想！！」</p>
+<p>「呜、呜哇！香、香澄chan！」</p>
+<p>有咲移开视线，但耳朵尖明显红了。</p>
+<p>「……随便你吧。」她小声说。</p>
+<p>沙绫温柔地笑了：「里美chan，那是很棒的目标呢。要加油哦。」</p>
+<p>「嗯、嗯……！」</p>
+<p>气氛变得温暖起来。</p>
+<p>有咲趁机转移话题：「沙绫，你那边怎么样？法学部。」</p>
+<p>沙绫端起咖啡杯，眼神变得认真：</p>
+<p>「法学……比我想象的要有意思。」</p>
+<p>「哦？」</p>
+<p>「教授第一节课讲的内容，让我印象很深。」她顿了顿，「他说，法律是盾牌。」</p>
+<p>「盾牌？」香澄歪头。</p>
+<p>「嗯。不只是用来惩罚坏人的工具，更是用来保护好人的——保护他们的权利、财产、自由和尊严。」</p>
+<p>沙绫的声音很平静，但带着一种坚定的力量。</p>
+<p>「说实话，选这个专业的时候，我心里是有一个想法的……」</p>
+<p>她看向在座的四个人：</p>
+<p>「如果有一天，大家遇到什么麻烦——不是乐器坏了那种小事，是更大、更复杂的问题——我想成为那个能说’没关系，交给我吧’的人。」</p>
+<p>「沙绫……」</p>
+<p>「所以我要好好学习。学会看合同里的陷阱，学会保护大家的权利。」沙绫微笑着，「虽然现在还什么都不会呢。」</p>
+<p>「沙绫——！！」香澄眼泪汪汪地又想扑过去。</p>
+<p>「等等香澄你刚才已经扑过里美了……！」有咲赶紧拦住她。</p>
+<p>沙绫笑着摇摇头：「好啦好啦。最后一个——有咲？」</p>
+<p>所有人的视线集中到了有咲身上。</p>
+<p>有咲的表情瞬间变得别扭。</p>
+<p>「……没什么特别的。就基础课，很无聊。」</p>
+<p>「骗人——」香澄凑过来，「里美chan说你在群里’没什么’的时候，语气不太一样！肯定有什么！」</p>
+<p>「才没有！」</p>
+<p>「有咲chan……」里美也小声说，「那个……你私聊说’被助教说了两句话’……」</p>
+<p>「里美你这个叛徒！！」</p>
+<p>「对、对不起……但是大家都很好奇……」</p>
+<p>有咲被逼到墙角，脸涨得通红。</p>
+<p>「就、就是……上课的时候在写自己的代码，被助教发现了……」</p>
+<p>「然后？」</p>
+<p>「然后他问我是不是想做NLP方向，还说……还说什么’这个架构虽然基础，但思路是对的’，还给了我一张实验室的名片……」</p>
+<p>她越说声音越小，最后几乎是嘟囔着说完的。</p>
+<p>「就这样！没什么大不了的！」</p>
+<p>「等等？！」香澄跳起来，「这明明是超级大事件吧！入学第一周就被实验室看上了！有咲果然是天才！」</p>
+<p>「你够了啊！！」</p>
+<p>「有咲chan好厉害……」里美一脸崇拜。</p>
+<p>「不愧是有咲。」多惠平静地评价。</p>
+<p>沙绫笑着点头：「那个实验室是研究什么的？」</p>
+<p>「……自然语言处理。就是让计算机理解人类语言……之类的……」</p>
+<p>有咲的声音虽然在装作不在乎，但眼神里有什么东西在闪光。</p>
+<p>她想起那篇论文的标题——</p>
+<p><em>「Attention Is All You Need」</em></p>
+<p>如果有一天，计算机真的能”理解”人类在说什么……那会是什么样的世界呢？</p>
+<p>「——有咲？」香澄的声音打断了她的思绪。</p>
+<p>「……干什么。」</p>
+<p>「你刚才的表情，和在舞台上弹键盘的时候一样哦。」</p>
+<p>「……哈？」</p>
+<p>「就是那种——」香澄比划着，「闪闪发光的表情！」</p>
+<p>有咲愣住了。</p>
+<p>然后脸腾地红到了耳根。</p>
+<p>「才、才没有！你在胡说什么啊！」</p>
+<p>「有的有的！里美chan你说！」</p>
+<p>「嗯……有咲chan真的在发光……」</p>
+<p>「连里美你也！！」</p>
+<p>沙绫适时地拍了拍手：「好了好了，分享环节结束——接下来，是不是该做点我们最擅长的事了？」</p>
+<p>她的视线落在角落里静静立着的乐器们身上。</p>
+<p>吉他、贝斯、鼓、键盘——它们在等着自己的主人。</p>
+<p>「……说得也是。」有咲站起身，走向自己的键盘，「说那么多话，不如直接弹来得痛快。」</p>
+<p>「有咲说得对！！」香澄蹦起来，「Poppin’Party——来合奏吧！！」</p>
+<p>她抓起吉他，随意地拨了一下弦，整个地下室都跟着震动。</p>
+<p>多惠把奥丁放在沙发上，系好贝斯的背带。</p>
+<p>里美深吸一口气，坐到鼓的位置。</p>
+<p>沙绫温柔地拿起贝斯——然后愣了一下：「啊……多惠chan，我们都是贝斯……」</p>
+<p>「没关系。」多惠面无表情，「二重贝斯也很酷。」</p>
+<p>「要不我去拿木吉他？」</p>
+<p>「那我来打铃鼓！」香澄举手。</p>
+<p>「你是主唱和吉他，不许换！」有咲吐槽。</p>
+<p>一阵混乱之后，五个人终于各就各位。</p>
+<p>有咲的手指落在琴键上，熟悉的触感让她心跳平稳下来。</p>
+<p>「——准备好了吗？」香澄的声音响起。</p>
+<p>「别问废话，直接开始。」</p>
+<p>「那么——」</p>
+<p>香澄清了清嗓子，对着想象中的观众席（其实只有奥丁）大喊：</p>
+<p>「Poppin’Party——开始演奏！！」</p>
+<p>1、2、3、4——</p>
+<p>里美的鼓点落下，节奏开始流动。</p>
+<p>多惠和沙绫的贝斯线交织在一起，意外地和谐。</p>
+<p>有咲的键盘铺开底色，明亮的和弦在空气中绽放。</p>
+<p>然后，香澄开始唱——</p>
+<p>那是一首她们排练过无数次的歌。</p>
+<p>歌词里写的是”不管在哪里，心跳都是连在一起的”之类的东西。</p>
+<p>以前有咲觉得这歌词太中二了，现在——</p>
+<p>她依然觉得很中二。</p>
+<p>但同时，她也觉得——</p>
+<p><strong>真好。</strong></p>
+<p>分开了一周，各自走进了不同的教室、不同的世界。</p>
+<p>但此刻，在这个熟悉的地下室里，五个人的声音重新交织在一起。</p>
+<p>什么传播学、什么经济学、什么电子工程、什么法律、什么人工智能——</p>
+<p>在音乐面前，全都变成了背景。</p>
+<p>重要的，只有这一刻。</p>
+<p>只有这五个人。</p>
+<p>只有一起创造出来的这个声音。</p>
+<p>曲子进入尾声，香澄的声音在最高处绽放：</p>
+<p>「——不管学什么，不管在哪里，Poppin’Party的心跳是连在一起的！！」</p>
+<p>最后一个和弦落下，余韵在空气中久久不散。</p>
+<p>有咲关掉键盘的电源，站起身来。</p>
+<p>「……这种台词，真的不害臊吗。」</p>
+<p>「才不害臊！因为是真心话！」</p>
+<p>「你……」</p>
+<p>有咲张了张嘴，最终只是叹了口气。</p>
+<p>「算了，随你便吧。」</p>
+<p>但她的嘴角，在不自觉间微微上扬。</p>
+<hr>
+<h2 id="场景1-4：各自的夜·序章伏笔"><a href="#场景1-4：各自的夜·序章伏笔" class="headerlink" title="场景1-4：各自的夜·序章伏笔"></a>场景1-4：各自的夜·序章伏笔</h2><hr>
+<h3 id="【市ヶ谷有咲·流星堂·深夜】"><a href="#【市ヶ谷有咲·流星堂·深夜】" class="headerlink" title="【市ヶ谷有咲·流星堂·深夜】"></a>【市ヶ谷有咲·流星堂·深夜】</h3><p>聚会结束后，其他四个人都回家了。</p>
+<p>有咲独自躺在地下室的沙发上，盯着天花板发呆。</p>
+<p>过了一会儿，她坐起身，打开笔记本电脑。</p>
+<p>屏幕亮起的瞬间，今天没写完的代码还停留在上次的位置。</p>
+<p>她盯着那段简陋的LSTM模型，皱了皱眉。</p>
+<p>「……确实太基础了。」</p>
+<p>她打开浏览器，搜索框里敲下：<strong>「Transformer architecture」</strong></p>
+<p>结果页面跳出来几百万条记录。</p>
+<p>她点开第一个链接——一篇技术博客，标题是《图解Transformer：Self-Attention机制详解》。</p>
+<p>Reading position……</p>
+<p>「……Self-Attention吗。」</p>
+<p>她一边读，一边在脑海中勾勒那个架构：</p>
+<p><em>Query、Key、Value三个矩阵……</em></p>
+<p><em>通过Query和Key做点积，得到Attention权重……</em></p>
+<p><em>用权重去加权求和Value，得到输出……</em></p>
+<p><em>相当于让每个token能”看到”序列里所有其他token的信息……</em></p>
+<p>越读，她的眼睛越亮。</p>
+<p>这个架构——比LSTM优雅太多了。</p>
+<p>LSTM需要一步一步地传递信息，像接力赛一样。信息传递的距离越长，损失就越大。</p>
+<p>但Self-Attention不同。它让每个位置都能直接和其他所有位置通信，相当于——</p>
+<p>「……相当于不需要排队，所有人都能同时和所有人说话？」</p>
+<p>她自言自语，然后扶额。</p>
+<p>什么奇怪的比喻。</p>
+<p>但确实就是这个意思。</p>
+<p>她又翻了几页，看到一段话：</p>
+<blockquote>
+<p><em>“Transformer架构的出现，标志着深度学习在自然语言处理领域的一次革命性突破。从BERT到GPT，基于Transformer的预训练模型正在彻底改变我们构建NLP系统的方式。”</em></p>
+</blockquote>
+<p>革命性突破。</p>
+<p>彻底改变。</p>
+<p>有咲盯着这几个词，心跳不自觉地加快了。</p>
+<p>然后她想起助教给的那张名片。</p>
+<p>「自然语言处理实验室……」</p>
+<p>她把名片放在桌上，盯着看了一会儿。</p>
+<p>「……哼。」</p>
+<p>她轻声嘀咕：</p>
+<p>「看看也不是不行。」</p>
+<hr>
+<h3 id="【花园多惠·自宅·深夜】"><a href="#【花园多惠·自宅·深夜】" class="headerlink" title="【花园多惠·自宅·深夜】"></a>【花园多惠·自宅·深夜】</h3><p>多惠抱着奥丁，坐在自己房间的窗前。</p>
+<p>月光透过玻璃洒进来，在地板上投下淡淡的光斑。</p>
+<p>她面前摆着三样东西：</p>
+<p>一台笔记本电脑，屏幕上显示着某个股票软件的K线图。</p>
+<p>一本笔记本，封面上写着”兔子经济学”。</p>
+<p>还有一只兔子——奥丁正在她腿上安静地蹲着，偶尔动一动耳朵。</p>
+<p>「……今天的波动率是0.23。」多惠盯着屏幕上的数字，自言自语，「比昨天高了0.05。」</p>
+<p>她翻开笔记本，在今天的日期下写道：</p>
+<blockquote>
+<p><strong>4月XX日</strong></p>
+<ul>
+<li>市场波动率：0.23（↑0.05）</li>
+<li>奥丁行为记录：早上吃了1.5根胡萝卜，比平常多0.5根。下午跳了4次，比平常多1次。</li>
+<li>假说：奥丁进食量增加+运动量增加 → 体内能量上升 → 是否对应市场预期升温？</li>
+<li>待验证天数：25天</li>
+</ul>
+</blockquote>
+<p>她合上笔记本，低头看着奥丁。</p>
+<p>「你觉得呢，奥丁。」</p>
+<p>奥丁抖了抖鼻子，没有回应。</p>
+<p>「如果你的心跳……能够预测市场的心跳……那会很有趣。」</p>
+<p>她的声音很轻，像是在说一个秘密。</p>
+<p>然后她又打开笔记本，在最后补上一行：</p>
+<blockquote>
+<p><strong>备注：这个想法也许很疯狂。但科学的本质就是验证疯狂的假说。</strong></p>
+</blockquote>
+<hr>
+<h3 id="【牛込里美·自宅·深夜】"><a href="#【牛込里美·自宅·深夜】" class="headerlink" title="【牛込里美·自宅·深夜】"></a>【牛込里美·自宅·深夜】</h3><p>里美躺在床上，把被子裹到下巴。</p>
+<p>但她没有睡意。</p>
+<p>脑海里还回荡着今天聚会的画面——大家的分享、合奏、还有香澄那句”闪闪发光的梦想”。</p>
+<p>「闪闪发光的梦想……」</p>
+<p>她小声念叨着，然后翻了个身，拿起床头的手机。</p>
+<p>之前有咲发给她的那个链接还保存在收藏夹里。</p>
+<p>《GPU架构入门：从CUDA Cores到Tensor Cores》</p>
+<p>她点开链接，开始认真地阅读。</p>
+<blockquote>
+<p><em>“现代深度学习的计算主要依赖GPU进行加速。与CPU不同，GPU包含数千个简单的计算核心，可以同时处理大量并行计算任务……”</em></p>
+</blockquote>
+<p>里美皱着眉头，努力理解每一个词。</p>
+<p>大部分还是看不懂。</p>
+<p>什么是并行计算？什么是CUDA？什么是Tensor Cores？</p>
+<p>但她没有放弃。</p>
+<p>她打开备忘录，把不懂的词一个一个记下来：</p>
+<blockquote>
+<ul>
+<li><strong>GPU</strong>：Graphics Processing Unit，图形处理器，好像也可以用来做AI？</li>
+<li><strong>CUDA Cores</strong>：NVIDIA GPU里的计算单元</li>
+<li><strong>Tensor Cores</strong>：专门用来加速张量运算的核心。张量是什么？</li>
+<li><strong>并行计算</strong>：很多核心同时算？</li>
+</ul>
+</blockquote>
+<p>她看着自己写下的这些笔记，越看越觉得自己什么都不懂。</p>
+<p>但她想起今天那盏亮起来的LED灯。</p>
+<p>那个灯亮起来的时候，她是真的很开心。</p>
+<p>「……有咲chan说，做AI需要很多很多算力。」</p>
+<p>她在备忘录的最后写道：</p>
+<blockquote>
+<p><strong>算力是用硬件做出来的。</strong></p>
+<p><strong>如果我能学会做更强的硬件……</strong></p>
+<p><strong>也许有一天，能帮到有咲chan。</strong></p>
+</blockquote>
+<p>然后她把手机放回床头，把脸埋进枕头里。</p>
+<p>「要加油啊……」</p>
+<p>声音闷闷的，但带着某种小小的决心。</p>
+<hr>
+<h3 id="【山吹沙绫·自宅·深夜】"><a href="#【山吹沙绫·自宅·深夜】" class="headerlink" title="【山吹沙绫·自宅·深夜】"></a>【山吹沙绫·自宅·深夜】</h3><p>沙绫站在厨房里，手上沾满了面粉。</p>
+<p>面前的砧板上，是刚刚揉好的面团。</p>
+<p>她习惯在想事情的时候做面包。揉面的过程会让她平静下来。</p>
+<p>今天晚上，她想的是大家分享的那些内容。</p>
+<p>香澄要学习传播心跳的科学。</p>
+<p>多惠要用经济学（和兔子）预测市场。</p>
+<p>里美要做能让舞台更闪亮的硬件。</p>
+<p>有咲要研究让计算机理解人类语言的方法。</p>
+<p>而她自己——</p>
+<p>「……保护。」</p>
+<p>她轻声说出这个词。</p>
+<p>法律是盾牌。</p>
+<p>保护他人的权利、财产、自由、尊严。</p>
+<p>这句话，她今天在课上已经听过一次了。但此刻再想起来，却有了不一样的重量。</p>
+<p>如果大家真的要去做那些了不起的事——</p>
+<p>去传播心跳，去预测市场，去研究AI……</p>
+<p>那他们一定会遇到麻烦的吧？</p>
+<p>因为这个世界不只有梦想和热情。还有规则、陷阱、利益的博弈。</p>
+<p>「……我要好好学习。」</p>
+<p>她把面团整理成形，放进烤箱里。</p>
+<p>然后在手机备忘录里写道：</p>
+<blockquote>
+<p><strong>学习目标（长期）：</strong></p>
+<ul>
+<li>合同法：如何识别不平等条款</li>
+<li>知识产权法：如何保护创意和技术</li>
+<li>公司法：如何在法律框架内组建团队</li>
+</ul>
+<p><strong>目标日期：四年内打好基础</strong></p>
+</blockquote>
+<p>她看着这些文字，轻轻笑了笑。</p>
+<p>虽然还什么都不会。</p>
+<p>但至少——知道自己想成为什么样的人了。</p>
+<hr>
+<h3 id="【户山香澄·自宅·深夜】"><a href="#【户山香澄·自宅·深夜】" class="headerlink" title="【户山香澄·自宅·深夜】"></a>【户山香澄·自宅·深夜】</h3><p>香澄躺在床上，却怎么也睡不着。</p>
+<p>今天的事情太多了。</p>
+<p>入学典礼、传播学课程、流星堂的聚会、大家的分享、合奏……</p>
+<p>脑子里像有一百只小人在跳舞，根本停不下来。</p>
+<p>她翻来覆去，最后索性坐起来，打开台灯。</p>
+<p>床头放着一本崭新的笔记本。她在东京一家文具店买的，封面上印着一颗金色的星星。</p>
+<p>她拿起笔，在第一页写下：</p>
+<blockquote>
+<p><strong>大学第一周总结</strong></p>
+<ol>
+<li>传播学好有趣！传播&#x3D;连接×共鸣！</li>
+<li>有咲被实验室看上了！好厉害！</li>
+<li>多惠在研究兔子和经济学的关系。虽然不太懂但好像很厉害！</li>
+<li>里美想做能让舞台闪亮的硬件！里美超可爱！</li>
+<li>沙绫要学法律来保护大家！沙绫最帅了！</li>
+<li>合奏的时候超开心！！</li>
+</ol>
+</blockquote>
+<p>写到这里，她停下来。</p>
+<p>然后在最下方，用大大的字写道：</p>
+<blockquote>
+<p><strong>目标：把大家的闪闪发光，传递给全世界！！</strong></p>
+</blockquote>
+<p>她看着这行字，忍不住笑了出来。</p>
+<p>很中二吧。</p>
+<p>有咲肯定会吐槽的。</p>
+<p>但——</p>
+<p>这就是她想做的事。</p>
+<p>香澄放下笔，躺回床上，把笔记本抱在胸口。</p>
+<p>透过窗户，能看见夜空中隐隐闪烁的星星。</p>
+<p>「不同的学校，不同的教室，不同的专业……」</p>
+<p>她轻声呢喃：</p>
+<p>「但没关系。因为我们的心跳，是连在一起的。」</p>
+<p>「这是……新的开始。」</p>
+<p>「闪闪发光的——开始。」</p>
+<p>她闭上眼睛，嘴角带着笑意，渐渐进入了梦乡。</p>
+<hr>
+<h2 id="章节尾声"><a href="#章节尾声" class="headerlink" title="章节尾声"></a>章节尾声</h2><hr>
+<p>那一年的四月，五颗星星开始了各自的旅程。</p>
+<p>户山香澄，在传播学的课堂上寻找”传递心跳”的科学。</p>
+<p>花园多惠，在经济学的公式里看到了兔子和市场的共通之处。</p>
+<p>牛込里美，在闪亮的LED灯里找到了自己想要前进的方向。</p>
+<p>山吹沙绫，在法律的教条里看到了保护伙伴的盾牌。</p>
+<p>市ヶ谷有咲，在Transformer的论文里窥见了理解人心的可能。</p>
+<p>她们还不知道，这些看似毫不相关的轨道，终有一天会交汇成一幅谁都没有预料到的星图。</p>
+<p>但此刻，她们只是做着自己想做的事——</p>
+<p>学着自己感兴趣的东西，</p>
+<p>想着怎样才能帮到重要的人。</p>
+<p>这就是一切的起点。</p>
+<p><strong>Compilation——编译开始。</strong></p>
+<p><strong>#include <code>&lt;future&gt;</code></strong></p>
+<p><strong>——未来，已被导入。</strong></p>
+<hr>
+<p><strong>第1章「#include <code>&lt;future&gt;</code>」—— 完</strong></p>
+<hr>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>STAR::BEAT Project 第一章</div>
+      <div>https://blog.arisa.best/2026/02/05/STAR-BEAT-Project-第一章/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Jjjjkooo</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>February 5, 2026</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              CC BY-NC-ND 4.0
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/02/05/STAR-BEAT-Project-%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="STAR::BEAT Project 第二章">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">STAR::BEAT Project 第二章</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/02/04/%E6%8E%8C%E5%BF%83%E4%B9%8B%E4%B8%8A%E7%9A%84%E6%96%87%E6%98%8E%E4%B8%B0%E7%A2%91%EF%BC%9A%E4%B8%80%E5%8F%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%94%B5%E8%84%91%E7%9A%84%E8%AF%9E%E7%94%9F/" title="掌心之上的文明丰碑：一台笔记本电脑的诞生">
+                        <span class="hidden-mobile">掌心之上的文明丰碑：一台笔记本电脑的诞生</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
